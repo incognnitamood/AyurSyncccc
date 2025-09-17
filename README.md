@@ -1,7 +1,7 @@
 
   # Ayurvedic Diet Management UI
 
-  This is a code bundle for Ayurvedic Diet Management UI. The original project is available at https://www.figma.com/design/Yh4A9MazhgWw6rNFlPodFt/Ayurvedic-Diet-Management-UI.
+  This is a code bundle for Ayurvedic Diet Management UI. The original project is available at http://localhost:3001/
 
   ## Running the code
 
