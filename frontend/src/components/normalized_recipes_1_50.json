@@ -1,0 +1,4796 @@
+[
+ {
+   "id": 1,
+   "name": "Khichdi",
+   "type": "Main Course",
+   "cuisine": "Indian",
+   "ingredients": [
+      {
+         "name": "Rice",
+         "quantity": "1/2 cup",
+         "note": "Cooling, easy to digest"
+      },
+      {
+         "name": "Moong dal",
+         "quantity": "1/2 cup",
+         "note": "Light, balances all doshas"
+      },
+      {
+         "name": "Ghee",
+         "quantity": "1 tbsp",
+         "note": "Grounding, improves digestion"
+      },
+      {
+         "name": "Cumin seeds",
+         "quantity": "1 tsp",
+         "note": "Stimulates agni"
+      },
+      {
+         "name": "Turmeric",
+         "quantity": "1/2 tsp",
+         "note": "Anti-inflammatory"
+      }
+   ],
+   "instructions": [
+      "Wash rice and dal.",
+      "Pressure cook with 3 cups water, turmeric, and salt.",
+      "Prepare tadka with ghee and cumin, add to khichdi.",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Tikta",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Balancing for all doshas",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         "Oily (Snigdha)"
+      ],
+      "guna_properties": "Easily digestible, grounding yet light, perfect for detoxification"
+   },
+   "health_benefits": [
+      "Detoxifying",
+      "Light on digestion",
+      "Balances gut flora",
+      "Supports recovery from illness"
+   ],
+   "nutrition_profile": {
+      "calories": 320,
+      "protein_g": 12,
+      "carbs_g": 55,
+      "fat_g": 8,
+      "fiber_g": 6,
+      "vitamins": [
+         "Vitamin A",
+         "Vitamin C",
+         "B-complex",
+         ""
+      ],
+      "minerals": {
+         "Iron": "10%",
+         "Calcium": "4%",
+         "Magnesium": "15%",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 55,
+      "nutrient_density_score": 7.5
+   }
+},
+ {
+   "id": 2,
+   "name": "Oats Porridge with Fruits",
+   "type": "Breakfast",
+   "cuisine": "Global/Indian",
+   "ingredients": [
+      {
+         "name": "Rolled oats",
+         "quantity": "1/2 cup",
+         "note": "Warm, grounding"
+      },
+      {
+         "name": "Milk (or almond milk)",
+         "quantity": "1 cup",
+         "note": "Cooling or neutral depending on type"
+      },
+      {
+         "name": "Banana",
+         "quantity": "1 small",
+         "note": "Sweet, heavy"
+      },
+      {
+         "name": "Apple",
+         "quantity": "1/2 sliced",
+         "note": "Balances Pitta"
+      },
+      {
+         "name": "Cinnamon",
+         "quantity": "1/2 tsp",
+         "note": "Improves digestion"
+      }
+   ],
+   "instructions": [
+      "Boil oats in milk until soft.",
+      "Top with chopped fruits and cinnamon.",
+      "Serve warm.",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Shita (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Strength-giving",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Oily (Snigdha)"
+      ],
+      "guna_properties": "Nourishing and grounding, provides sustained energy"
+   },
+   "health_benefits": [
+      "Sustained energy",
+      "Rich in fiber",
+      "Improves satiety",
+      "Heart-healthy"
+   ],
+   "nutrition_profile": {
+      "calories": 280,
+      "protein_g": 8,
+      "carbs_g": 52,
+      "fat_g": 5,
+      "fiber_g": 7,
+      "vitamins": [
+         "Vitamin B1",
+         "Vitamin C",
+         "Vitamin D",
+         ""
+      ],
+      "minerals": {
+         "Iron": "12%",
+         "Calcium": "",
+         "Magnesium": "20%",
+         "Potassium": "15%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 50,
+      "nutrient_density_score": 8.2
+   }
+},
+ {
+   "id": 3,
+   "name": "Vegetable Upma",
+   "type": "Breakfast",
+   "cuisine": "Indian",
+   "ingredients": [
+      {
+         "name": "Semolina (rava)",
+         "quantity": "1/2 cup",
+         "note": "Light, grounding"
+      },
+      {
+         "name": "Carrot",
+         "quantity": "1/4 cup chopped",
+         "note": "Sweet, cooling"
+      },
+      {
+         "name": "Beans",
+         "quantity": "1/4 cup chopped",
+         "note": "Balances Pitta"
+      },
+      {
+         "name": "Green peas",
+         "quantity": "2 tbsp",
+         "note": "Slightly heavy"
+      },
+      {
+         "name": "Ghee",
+         "quantity": "1 tbsp",
+         "note": "Digestive, grounding"
+      }
+   ],
+   "instructions": [
+      "Roast semolina until light golden.",
+      "Cook vegetables in water with salt.",
+      "Add semolina slowly, stir until thickened.",
+      "Top with ghee.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Tikta",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Quick energy provider",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Light (Laghu)",
+         "Oily (Snigdha)"
+      ],
+      "guna_properties": "Light yet satisfying, easily digestible breakfast option"
+   },
+   "health_benefits": [
+      "Easily digestible",
+      "Energy-giving",
+      "Customizable with veggies",
+      "Good for morning metabolism"
+   ],
+   "nutrition_profile": {
+      "calories": 260,
+      "protein_g": 7,
+      "carbs_g": 45,
+      "fat_g": 7,
+      "fiber_g": 5,
+      "vitamins": [
+         "Vitamin A",
+         "Folate",
+         "Vitamin C",
+         ""
+      ],
+      "minerals": {
+         "Iron": "8%",
+         "Calcium": "4%",
+         "Magnesium": "10%",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 65,
+      "nutrient_density_score": 6.8
+   }
+},
+ {
+   "id": 4,
+   "name": "Mung Bean Soup",
+   "type": "Soup",
+   "cuisine": "Indian",
+   "ingredients": [
+      {
+         "name": "Mung beans (whole green)",
+         "quantity": "1/2 cup",
+         "note": "Light, tridoshic"
+      },
+      {
+         "name": "Cumin",
+         "quantity": "1 tsp",
+         "note": "Agni stimulant"
+      },
+      {
+         "name": "Turmeric",
+         "quantity": "1/2 tsp",
+         "note": "Anti-inflammatory"
+      },
+      {
+         "name": "Ginger",
+         "quantity": "1 inch",
+         "note": "Improves digestion"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Soak mung beans for 4 hours.",
+      "Cook until soft with turmeric and salt.",
+      "Prepare tadka with cumin and ginger, add to soup.",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Shita (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Detoxifying",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         "Dry (Ruksha)"
+      ],
+      "guna_properties": "Perfect detox food, light yet protein-rich"
+   },
+   "health_benefits": [
+      "Detoxifying",
+      "High in protein",
+      "Improves digestion",
+      "Supports weight management"
+   ],
+   "nutrition_profile": {
+      "calories": 210,
+      "protein_g": 14,
+      "carbs_g": 36,
+      "fat_g": 2,
+      "fiber_g": 8,
+      "vitamins": [
+         "Vitamin C",
+         "Folate",
+         "Vitamin B6",
+         ""
+      ],
+      "minerals": {
+         "Iron": "16%",
+         "Calcium": "",
+         "Magnesium": "18%",
+         "Potassium": "20%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 30,
+      "nutrient_density_score": 9.1
+   }
+},
+ {
+   "id": 5,
+   "name": "Vegetable Stir-Fry",
+   "type": "Side Dish",
+   "cuisine": "Global",
+   "ingredients": [
+      {
+         "name": "Broccoli",
+         "quantity": "1/2 cup",
+         "note": "Bitter, balances Kapha"
+      },
+      {
+         "name": "Carrot",
+         "quantity": "1/4 cup",
+         "note": "Sweet, cooling"
+      },
+      {
+         "name": "Bell peppers",
+         "quantity": "1/4 cup",
+         "note": "Pitta balancing"
+      },
+      {
+         "name": "Sesame oil",
+         "quantity": "1 tsp",
+         "note": "Heating, grounding"
+      },
+      {
+         "name": "Soy sauce",
+         "quantity": "1 tsp",
+         "note": "Adds umami flavor"
+      }
+   ],
+   "instructions": [
+      "Heat oil in a pan.",
+      "Add vegetables and stir-fry quickly.",
+      "Season with soy sauce and serve warm.",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Tikta",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Katu (Pungent)",
+      "prabhava": "Light and digestible",
+      "dosha_effect": {
+         "Vata": "neutral",
+         "Pitta": "↓",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         "Dry (Ruksha)"
+      ],
+      "guna_properties": "Light, easy to digest, metabolism boosting"
+   },
+   "health_benefits": [
+      "Rich in antioxidants",
+      "Low calorie",
+      "Supports metabolism",
+      "High in vitamins"
+   ],
+   "nutrition_profile": {
+      "calories": 150,
+      "protein_g": 5,
+      "carbs_g": 18,
+      "fat_g": 6,
+      "fiber_g": 5,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin A",
+         "Vitamin K",
+         ""
+      ],
+      "minerals": {
+         "Iron": "6%",
+         "Calcium": "8%",
+         "Magnesium": "",
+         "Potassium": "12%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 30,
+      "nutrient_density_score": 8.5
+   }
+},
+ {
+   "id": 6,
+   "name": "Masoor Dal (Red Lentil Curry)",
+   "type": "Main Course",
+   "cuisine": "Indian",
+   "ingredients": [
+      {
+         "name": "Red lentils",
+         "quantity": "1/2 cup",
+         "note": "Light, sweet post-digestive"
+      },
+      {
+         "name": "Onion",
+         "quantity": "1 small",
+         "note": "Warming, can aggravate Pitta"
+      },
+      {
+         "name": "Tomato",
+         "quantity": "1 medium",
+         "note": "Sour, increases Pitta"
+      },
+      {
+         "name": "Turmeric",
+         "quantity": "1/2 tsp",
+         "note": "Balances all doshas"
+      },
+      {
+         "name": "Cumin seeds",
+         "quantity": "1 tsp",
+         "note": "Agni stimulant"
+      }
+   ],
+   "instructions": [
+      "Wash and cook lentils with turmeric until soft.",
+      "Prepare tadka with onion, tomato, cumin.",
+      "Mix into dal and simmer 5 minutes.",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Strength-building",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↑",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         "Oily (Snigdha)"
+      ],
+      "guna_properties": "Protein-rich, warming, can increase Pitta if consumed excessively"
+   },
+   "health_benefits": [
+      "High protein",
+      "Improves hemoglobin",
+      "Easily digestible",
+      "Supports muscle health"
+   ],
+   "nutrition_profile": {
+      "calories": 230,
+      "protein_g": 15,
+      "carbs_g": 35,
+      "fat_g": 3,
+      "fiber_g": 8,
+      "vitamins": [
+         "Vitamin C",
+         "Folate",
+         "Vitamin B6",
+         ""
+      ],
+      "minerals": {
+         "Iron": "20%",
+         "Calcium": "",
+         "Magnesium": "",
+         "Potassium": "15%",
+         "Zinc": "12%",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 35,
+      "nutrient_density_score": 8.9
+   }
+},
+ {
+   "id": 7,
+   "name": "Lassi (Sweet Yogurt Drink)",
+   "type": "Beverage",
+   "cuisine": "Indian",
+   "ingredients": [
+      {
+         "name": "Yogurt",
+         "quantity": "1 cup",
+         "note": "Cooling, heavy"
+      },
+      {
+         "name": "Water",
+         "quantity": "1/2 cup",
+         "note": "Neutral"
+      },
+      {
+         "name": "Sugar",
+         "quantity": "2 tsp",
+         "note": "Cooling, heavy"
+      },
+      {
+         "name": "Cardamom powder",
+         "quantity": "1/4 tsp",
+         "note": "Digestive aid"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Blend yogurt with water until smooth.",
+      "Add sugar and cardamom powder.",
+      "Serve chilled (not ice-cold).",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "",
+         ""
+      ],
+      "virya": "Shita (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Cooling tonic",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Oily (Snigdha)"
+      ],
+      "guna_properties": "Cooling, nourishing, excellent for Pitta conditions"
+   },
+   "health_benefits": [
+      "Aids digestion",
+      "Cooling effect",
+      "Probiotic benefits",
+      "Hydrating"
+   ],
+   "nutrition_profile": {
+      "calories": 180,
+      "protein_g": 6,
+      "carbs_g": 28,
+      "fat_g": 4,
+      "fiber_g": 0,
+      "vitamins": [
+         "Vitamin B12",
+         "Vitamin D",
+         "Riboflavin",
+         ""
+      ],
+      "minerals": {
+         "Iron": "",
+         "Calcium": "18%",
+         "Magnesium": "",
+         "Potassium": "8%",
+         "Zinc": "",
+         "Phosphorus": "12%",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 45,
+      "nutrient_density_score": 7
+   }
+},
+ {
+   "id": 8,
+   "name": "Vegetable Pulao",
+   "type": "Main Course",
+   "cuisine": "Indian",
+   "ingredients": [
+      {
+         "name": "Basmati rice",
+         "quantity": "1 cup",
+         "note": "Cooling, sweet"
+      },
+      {
+         "name": "Carrot",
+         "quantity": "1/4 cup chopped",
+         "note": "Sweet, light"
+      },
+      {
+         "name": "Beans",
+         "quantity": "1/4 cup chopped",
+         "note": "Balances Pitta"
+      },
+      {
+         "name": "Green peas",
+         "quantity": "2 tbsp",
+         "note": "Heavy"
+      },
+      {
+         "name": "Cloves and cardamom",
+         "quantity": "2 each",
+         "note": "Digestive, aromatic"
+      }
+   ],
+   "instructions": [
+      "Soak rice for 20 minutes.",
+      "Sauté spices and vegetables in ghee.",
+      "Add rice and water, cook until fluffy.",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Tikta",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Sattvic meal",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Oily (Snigdha)"
+      ],
+      "guna_properties": "Aromatic, nourishing, balanced one-pot meal"
+   },
+   "health_benefits": [
+      "Provides energy",
+      "Rich in fiber",
+      "Sattvic and wholesome",
+      "Aromatic spices aid digestion"
+   ],
+   "nutrition_profile": {
+      "calories": 340,
+      "protein_g": 8,
+      "carbs_g": 65,
+      "fat_g": 7,
+      "fiber_g": 6,
+      "vitamins": [
+         "Vitamin A",
+         "Folate",
+         "Vitamin C",
+         ""
+      ],
+      "minerals": {
+         "Iron": "10%",
+         "Calcium": "",
+         "Magnesium": "12%",
+         "Potassium": "14%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 60,
+      "nutrient_density_score": 7.2
+   }
+},
+ {
+   "id": 9,
+   "name": "Lentil Salad with Lemon Dressing",
+   "type": "Salad",
+   "cuisine": "Global",
+   "ingredients": [
+      {
+         "name": "Brown lentils",
+         "quantity": "1/2 cup cooked",
+         "note": "Grounding, tridoshic"
+      },
+      {
+         "name": "Cucumber",
+         "quantity": "1/4 cup chopped",
+         "note": "Cooling"
+      },
+      {
+         "name": "Tomato",
+         "quantity": "1/4 cup chopped",
+         "note": "Sour, Pitta aggravating"
+      },
+      {
+         "name": "Lemon juice",
+         "quantity": "1 tbsp",
+         "note": "Sour, stimulates digestion"
+      },
+      {
+         "name": "Olive oil",
+         "quantity": "1 tsp",
+         "note": "Neutral, nourishing"
+      }
+   ],
+   "instructions": [
+      "Cook lentils until soft but not mushy.",
+      "Mix with chopped vegetables.",
+      "Add lemon juice, olive oil, and salt.",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Amla",
+         ""
+      ],
+      "virya": "Shita (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Refreshing",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↑",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         "Dry (Ruksha)"
+      ],
+      "guna_properties": "Light, refreshing, but lemon and tomato may aggravate Pitta"
+   },
+   "health_benefits": [
+      "High in fiber",
+      "Rich in plant protein",
+      "Cooling and refreshing",
+      "Antioxidant rich"
+   ],
+   "nutrition_profile": {
+      "calories": 200,
+      "protein_g": 11,
+      "carbs_g": 32,
+      "fat_g": 4,
+      "fiber_g": 9,
+      "vitamins": [
+         "Vitamin C",
+         "Folate",
+         "Vitamin K",
+         ""
+      ],
+      "minerals": {
+         "Iron": "15%",
+         "Calcium": "",
+         "Magnesium": "14%",
+         "Potassium": "16%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 25,
+      "nutrient_density_score": 9
+   }
+},
+ {
+   "id": 10,
+   "name": "Kheer (Rice Pudding)",
+   "type": "Dessert",
+   "cuisine": "Indian",
+   "ingredients": [
+      {
+         "name": "Rice",
+         "quantity": "1/4 cup",
+         "note": "Sweet, cooling"
+      },
+      {
+         "name": "Milk",
+         "quantity": "2 cups",
+         "note": "Nourishing, heavy"
+      },
+      {
+         "name": "Sugar",
+         "quantity": "3 tbsp",
+         "note": "Sweet, heavy"
+      },
+      {
+         "name": "Cardamom",
+         "quantity": "1/4 tsp",
+         "note": "Digestive"
+      },
+      {
+         "name": "Cashews and raisins",
+         "quantity": "2 tbsp",
+         "note": "Strength-giving"
+      }
+   ],
+   "instructions": [
+      "Cook rice in milk until soft.",
+      "Add sugar, cardamom, and nuts.",
+      "Simmer until creamy.",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "",
+         ""
+      ],
+      "virya": "Shita (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Nourishing dessert",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Oily (Snigdha)"
+      ],
+      "guna_properties": "Rich, nourishing, comfort food that builds Ojas"
+   },
+   "health_benefits": [
+      "Nourishing",
+      "Strength-giving",
+      "Comfort food",
+      "Builds Ojas"
+   ],
+   "nutrition_profile": {
+      "calories": 320,
+      "protein_g": 9,
+      "carbs_g": 52,
+      "fat_g": 10,
+      "fiber_g": 1,
+      "vitamins": [
+         "Vitamin B2",
+         "Vitamin D",
+         "Vitamin A",
+         ""
+      ],
+      "minerals": {
+         "Iron": "6%",
+         "Calcium": "20%",
+         "Magnesium": "",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "15%",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 65,
+      "nutrient_density_score": 6.5
+   }
+},
+ {
+   "id": 11,
+   "name": "Palak Paneer",
+   "type": "Main Course",
+   "cuisine": "North Indian",
+   "ingredients": [
+      {
+         "name": "Spinach (Palak)",
+         "quantity": "2 cups",
+         "note": "Cooling, balances Pitta, rich in iron"
+      },
+      {
+         "name": "Paneer",
+         "quantity": "150g",
+         "note": "Heavy, nourishing, Kapha increasing"
+      },
+      {
+         "name": "Ghee",
+         "quantity": "1 tbsp",
+         "note": "Aids digestion, grounding"
+      },
+      {
+         "name": "Spices (cumin, ginger, garlic)",
+         "quantity": "1 tsp each",
+         "note": "Enhances Agni, balances Kapha"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Blanch spinach and puree.",
+      "Sauté cumin, ginger, and garlic in ghee.",
+      "Add paneer cubes and cook lightly.",
+      "Mix spinach puree, add salt and spices.",
+      "Simmer until creamy and serve hot."
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Tikta",
+         "Madhura",
+         ""
+      ],
+      "virya": "Sheeta (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Balances Pitta heat",
+      "dosha_effect": {
+         "Vata": "neutral",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Oily (Snigdha)"
+      ],
+      "guna_properties": "Rich, cooling dish that balances Pitta but can increase Kapha due to paneer"
+   },
+   "health_benefits": [
+      "Rich source of calcium and iron",
+      "Balances excess Pitta",
+      "Supports bone strength and immunity",
+      "High protein content"
+   ],
+   "nutrition_profile": {
+      "calories": 320,
+      "protein_g": 16,
+      "carbs_g": 12,
+      "fat_g": 24,
+      "fiber_g": 4,
+      "vitamins": [
+         "Vitamin A",
+         "Vitamin K",
+         "Folate",
+         ""
+      ],
+      "minerals": {
+         "Iron": "20%",
+         "Calcium": "25%",
+         "Magnesium": "15%",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 40,
+      "nutrient_density_score": 8.2
+   }
+},
+ {
+   "id": 12,
+   "name": "Masoor Dal Curry",
+   "type": "Main Course",
+   "cuisine": "Indian",
+   "ingredients": [
+      {
+         "name": "Masoor dal (red lentils)",
+         "quantity": "1 cup",
+         "note": "Laghu, balances Vata & Pitta"
+      },
+      {
+         "name": "Tomatoes",
+         "quantity": "2",
+         "note": "Cooling, balances Pitta"
+      },
+      {
+         "name": "Ghee",
+         "quantity": "1 tbsp",
+         "note": "Grounding, aids digestion"
+      },
+      {
+         "name": "Spices (turmeric, cumin)",
+         "quantity": "1 tsp each",
+         "note": "Boosts Agni, reduces Kapha"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Wash and pressure cook lentils until soft.",
+      "In ghee, sauté cumin, turmeric, and chopped tomatoes.",
+      "Add cooked lentils, salt, and simmer for 10 minutes.",
+      "Garnish with coriander leaves.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Tikta",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Balances Vata-related weakness",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Light (Laghu)",
+         ""
+      ],
+      "guna_properties": "Light yet nourishing protein source that strengthens without heaviness"
+   },
+   "health_benefits": [
+      "Rich in protein and iron",
+      "Improves digestion and gut health",
+      "Strengthens immunity",
+      "Supports hemoglobin levels"
+   ],
+   "nutrition_profile": {
+      "calories": 240,
+      "protein_g": 15,
+      "carbs_g": 35,
+      "fat_g": 6,
+      "fiber_g": 8,
+      "vitamins": [
+         "Folate",
+         "Vitamin B6",
+         "Vitamin C",
+         ""
+      ],
+      "minerals": {
+         "Iron": "22%",
+         "Calcium": "",
+         "Magnesium": "16%",
+         "Potassium": "18%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 30,
+      "nutrient_density_score": 9
+   }
+},
+ {
+   "id": 13,
+   "name": "Curd Rice",
+   "type": "Main Course",
+   "cuisine": "South Indian",
+   "ingredients": [
+      {
+         "name": "Cooked rice",
+         "quantity": "1 cup",
+         "note": "Cooling, balances Pitta"
+      },
+      {
+         "name": "Curd (yogurt)",
+         "quantity": "1/2 cup",
+         "note": "Sheeta virya, Pitta pacifying"
+      },
+      {
+         "name": "Ghee",
+         "quantity": "1 tsp",
+         "note": "Improves digestion"
+      },
+      {
+         "name": "Mustard seeds, curry leaves",
+         "quantity": "1 tsp",
+         "note": "Enhances Agni, balances Kapha"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Mix cooled cooked rice with curd.",
+      "In ghee, temper mustard seeds and curry leaves.",
+      "Pour seasoning over rice-curd mixture.",
+      "Serve with pickle or papad.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Amla",
+         ""
+      ],
+      "virya": "Sheeta (Cooling)",
+      "vipaka": "Amla (Sour)",
+      "prabhava": "Cooling for digestion",
+      "dosha_effect": {
+         "Vata": "↑",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Oily (Snigdha)"
+      ],
+      "guna_properties": "Excellent cooling meal for hot weather but can aggravate Vata in cold conditions"
+   },
+   "health_benefits": [
+      "Excellent cooling dish in summer",
+      "Balances Pitta heat",
+      "Supports gut microbiome with probiotics",
+      "Hydrating and soothing"
+   ],
+   "nutrition_profile": {
+      "calories": 210,
+      "protein_g": 6,
+      "carbs_g": 36,
+      "fat_g": 6,
+      "fiber_g": 2,
+      "vitamins": [
+         "Vitamin B12",
+         "Vitamin D",
+         "Riboflavin",
+         ""
+      ],
+      "minerals": {
+         "Iron": "",
+         "Calcium": "15%",
+         "Magnesium": "",
+         "Potassium": "8%",
+         "Zinc": "",
+         "Phosphorus": "12%",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 58,
+      "nutrient_density_score": null
+   }
+},
+ {
+   "id": 14,
+   "name": "Vegetable Daliya (Broken Wheat Porridge)",
+   "type": "Main Course",
+   "cuisine": "Indian",
+   "ingredients": [
+      {
+         "name": "Broken wheat (daliya)",
+         "quantity": "1 cup",
+         "note": "High fiber, balances Kapha"
+      },
+      {
+         "name": "Mixed vegetables",
+         "quantity": "1 cup",
+         "note": "Tridosha balancing, rich in vitamins"
+      },
+      {
+         "name": "Ghee",
+         "quantity": "1 tbsp",
+         "note": "Grounding and nourishing"
+      },
+      {
+         "name": "Spices (cumin, ginger)",
+         "quantity": "1 tsp each",
+         "note": "Stimulates Agni"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Roast daliya lightly in ghee.",
+      "Add vegetables, water, and spices.",
+      "Pressure cook until soft.",
+      "Serve warm with fresh coriander.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Light yet nourishing",
+      "dosha_effect": {
+         "Vata": "neutral",
+         "Pitta": "neutral",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         ""
+      ],
+      "guna_properties": "High fiber content makes it excellent for weight management and Kapha balance"
+   },
+   "health_benefits": [
+      "Rich in fiber for digestion",
+      "Balances Kapha and supports weight management",
+      "Provides slow-release energy",
+      "High in B-vitamins"
+   ],
+   "nutrition_profile": {
+      "calories": 250,
+      "protein_g": 9,
+      "carbs_g": 45,
+      "fat_g": 6,
+      "fiber_g": 7,
+      "vitamins": [
+         "Vitamin B1",
+         "Vitamin C",
+         "Folate",
+         ""
+      ],
+      "minerals": {
+         "Iron": "14%",
+         "Calcium": "",
+         "Magnesium": "16%",
+         "Potassium": "",
+         "Zinc": "12%",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 48,
+      "nutrient_density_score": 7.5
+   }
+},
+ {
+   "id": 15,
+   "name": "Tomato Rasam",
+   "type": "Soup",
+   "cuisine": "South Indian",
+   "ingredients": [
+      {
+         "name": "Tomatoes",
+         "quantity": "3",
+         "note": "Cooling, balances Pitta"
+      },
+      {
+         "name": "Tamarind pulp",
+         "quantity": "2 tbsp",
+         "note": "Amla rasa, digestive stimulant"
+      },
+      {
+         "name": "Black pepper & cumin",
+         "quantity": "1 tsp each",
+         "note": "Deepana (enhances digestion)"
+      },
+      {
+         "name": "Curry leaves",
+         "quantity": "06-Aug",
+         "note": "Improves Agni"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Boil tomatoes and tamarind pulp in water.",
+      "Add spices (pepper, cumin) and curry leaves.",
+      "Simmer for 10 minutes.",
+      "Serve hot as soup or with rice.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Amla",
+         "Katu",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Katu (Pungent)",
+      "prabhava": "Stimulates appetite and digestion",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         "Sharp (Tikshna)"
+      ],
+      "guna_properties": "Excellent digestive stimulant that clears congestion and improves appetite"
+   },
+   "health_benefits": [
+      "Improves digestion and appetite",
+      "Clears Kapha congestion",
+      "Rich in antioxidants like lycopene",
+      "Supports respiratory health"
+   ],
+   "nutrition_profile": {
+      "calories": 70,
+      "protein_g": 2,
+      "carbs_g": 12,
+      "fat_g": 2,
+      "fiber_g": 3,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin A",
+         "Lycopene",
+         ""
+      ],
+      "minerals": {
+         "Iron": "4%",
+         "Calcium": "",
+         "Magnesium": "",
+         "Potassium": "8%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "6%",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 30,
+      "nutrient_density_score": 7
+   }
+},
+ {
+   "id": 16,
+   "name": "Lemon Rice",
+   "type": "Main Course",
+   "cuisine": "South Indian",
+   "ingredients": [
+      {
+         "name": "Cooked rice",
+         "quantity": "1 cup",
+         "note": "Cooling, Pitta pacifying"
+      },
+      {
+         "name": "Lemon juice",
+         "quantity": "2 tbsp",
+         "note": "Amla rasa, stimulates Agni"
+      },
+      {
+         "name": "Mustard seeds, curry leaves",
+         "quantity": "1 tsp",
+         "note": "Clears Kapha, enhances digestion"
+      },
+      {
+         "name": "Green chilies",
+         "quantity": "01-Feb",
+         "note": "Ushna, stimulates digestion"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Mix cooled cooked rice with lemon juice and salt.",
+      "In ghee, temper mustard seeds, curry leaves, and chilies.",
+      "Mix seasoning into rice and serve.",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Amla",
+         "Madhura",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Amla (Sour)",
+      "prabhava": "Light and appetite-enhancing",
+      "dosha_effect": {
+         "Vata": "neutral",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Light (Laghu)",
+         ""
+      ],
+      "guna_properties": "Refreshing summer meal that's light yet satisfying with digestive spices"
+   },
+   "health_benefits": [
+      "Excellent summer meal",
+      "Balances Pitta and refreshes mind",
+      "Improves digestion with lemon",
+      "Rich in Vitamin C"
+   ],
+   "nutrition_profile": {
+      "calories": 210,
+      "protein_g": 4,
+      "carbs_g": 40,
+      "fat_g": 5,
+      "fiber_g": 2,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin B1",
+         "Folate",
+         ""
+      ],
+      "minerals": {
+         "Iron": "6%",
+         "Calcium": "",
+         "Magnesium": "8%",
+         "Potassium": "5%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 58,
+      "nutrient_density_score": 6.2
+   }
+},
+ {
+   "id": 17,
+   "name": "Oats Vegetable Chilla",
+   "type": "Breakfast",
+   "cuisine": "Modern Indian",
+   "ingredients": [
+      {
+         "name": "Oats flour",
+         "quantity": "1 cup",
+         "note": "Laghu, balances Kapha"
+      },
+      {
+         "name": "Grated carrots & spinach",
+         "quantity": "1 cup",
+         "note": "Adds vitamins, Tridosha balancing"
+      },
+      {
+         "name": "Spices (ginger, cumin)",
+         "quantity": "1 tsp each",
+         "note": "Stimulates Agni"
+      },
+      {
+         "name": "Oil",
+         "quantity": "1 tbsp",
+         "note": "Neutral, balancing"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Mix oats flour with water and spices into a batter.",
+      "Add grated vegetables.",
+      "Pour onto a hot pan, cook both sides like a pancake.",
+      "Serve with chutney.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Healthy alternative to fried snacks",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         ""
+      ],
+      "guna_properties": "High fiber breakfast that's filling yet light, excellent for weight management"
+   },
+   "health_benefits": [
+      "High in fiber, good for digestion",
+      "Balances Kapha, supports weight management",
+      "Provides satiety with fewer calories",
+      "Rich in antioxidants"
+   ],
+   "nutrition_profile": {
+      "calories": 200,
+      "protein_g": 8,
+      "carbs_g": 30,
+      "fat_g": 6,
+      "fiber_g": 6,
+      "vitamins": [
+         "Vitamin A",
+         "Vitamin C",
+         "Beta-carotene",
+         ""
+      ],
+      "minerals": {
+         "Iron": "10%",
+         "Calcium": "",
+         "Magnesium": "12%",
+         "Potassium": "",
+         "Zinc": "8%",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 45,
+      "nutrient_density_score": 7.8
+   }
+},
+ {
+   "id": 18,
+   "name": "Moong Dal Chilla",
+   "type": "Breakfast",
+   "cuisine": "Indian",
+   "ingredients": [
+      {
+         "name": "Moong dal (soaked & ground)",
+         "quantity": "1 cup",
+         "note": "Laghu, balances all doshas"
+      },
+      {
+         "name": "Onion & coriander",
+         "quantity": "1/2 cup",
+         "note": "Adds flavor, cooling"
+      },
+      {
+         "name": "Green chili & ginger",
+         "quantity": "1 tsp each",
+         "note": "Stimulates Agni"
+      },
+      {
+         "name": "Oil",
+         "quantity": "1 tbsp",
+         "note": "Neutral, grounding"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Soak moong dal for 4 hours, grind into a batter.",
+      "Mix with onion, coriander, chili, and ginger.",
+      "Cook on a hot pan until golden on both sides.",
+      "Serve hot with chutney.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Katu",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Light, protein-rich breakfast",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         ""
+      ],
+      "guna_properties": "Perfect protein-rich breakfast that's light and easily digestible"
+   },
+   "health_benefits": [
+      "Rich in plant protein",
+      "Balances Vata and Kapha",
+      "Supports weight management and muscle repair",
+      "Easy to digest"
+   ],
+   "nutrition_profile": {
+      "calories": 220,
+      "protein_g": 12,
+      "carbs_g": 28,
+      "fat_g": 6,
+      "fiber_g": 7,
+      "vitamins": [
+         "Vitamin B6",
+         "Vitamin C",
+         "Folate",
+         ""
+      ],
+      "minerals": {
+         "Iron": "15%",
+         "Calcium": "",
+         "Magnesium": "14%",
+         "Potassium": "12%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 35,
+      "nutrient_density_score": 8.5
+   }
+},
+ {
+   "id": 19,
+   "name": "Quinoa Vegetable Bowl",
+   "type": "",
+   "cuisine": "Global Fusion",
+   "ingredients": [
+      {
+         "name": "Quinoa",
+         "quantity": "1 cup",
+         "note": "Laghu, high protein, balances Kapha"
+      },
+      {
+         "name": "Mixed vegetables (broccoli, carrot, beans)",
+         "quantity": "1 cup",
+         "note": "Tridosha balancing"
+      },
+      {
+         "name": "Olive oil",
+         "quantity": "1 tbsp",
+         "note": "Snigdha, Pitta friendly"
+      },
+      {
+         "name": "Lemon juice",
+         "quantity": "1 tbsp",
+         "note": "Amla rasa, digestive stimulant"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Cook quinoa until fluffy.",
+      "Sauté vegetables lightly in olive oil.",
+      "Mix with quinoa, season with lemon and herbs.",
+      "Serve warm as a balanced lunch/dinner.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Ushna",
+      "vipaka": "Madhura",
+      "prabhava": "Light global alternative to rice",
+      "dosha_effect": {
+         "Vata": "neutral",
+         "Pitta": "↓",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Laghu",
+         ""
+      ],
+      "guna_properties": "Light, nourishing, and balancing meal"
+   },
+   "health_benefits": [
+      "High protein, gluten-free option",
+      "Balances Kapha, good for weight management",
+      "Supports muscle repair and digestion",
+      ""
+   ],
+   "nutrition_profile": {
+      "calories": 280,
+      "protein_g": 10,
+      "carbs_g": 42,
+      "fat_g": 9,
+      "fiber_g": 6,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin K",
+         "Folate",
+         ""
+      ],
+      "minerals": {
+         "Iron": "",
+         "Calcium": "",
+         "Magnesium": "14%",
+         "Potassium": "",
+         "Zinc": "10%",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 53,
+      "nutrient_density_score": 8.1
+   }
+},
+ {
+   "id": 20,
+   "name": "Avocado Toast with Seeds",
+   "type": "",
+   "cuisine": "Western",
+   "ingredients": [
+      {
+         "name": "Whole grain bread",
+         "quantity": "2 slices",
+         "note": "Guru, nourishing, Kapha increasing"
+      },
+      {
+         "name": "Avocado",
+         "quantity": "1/2 fruit",
+         "note": "Snigdha, balances Vata, may increase Kapha"
+      },
+      {
+         "name": "Pumpkin & sesame seeds",
+         "quantity": "1 tbsp each",
+         "note": "Balancing, grounding, supports Ojas"
+      },
+      {
+         "name": "Lemon juice",
+         "quantity": "1 tsp",
+         "note": "Amla rasa, aids digestion"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Toast bread slices.",
+      "Mash avocado with lemon juice and seasonings.",
+      "Spread on toast, sprinkle seeds.",
+      "Serve as a quick breakfast/snack.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Amla",
+         ""
+      ],
+      "virya": "Sheeta",
+      "vipaka": "Madhura",
+      "prabhava": "Grounding and nourishing breakfast",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Snigdha",
+         "Guru"
+      ],
+      "guna_properties": "Nourishing with healthy fats and grounding qualities"
+   },
+   "health_benefits": [
+      "Rich in healthy fats and fiber",
+      "Supports skin and immunity",
+      "Good breakfast for Vata and Pitta",
+      ""
+   ],
+   "nutrition_profile": {
+      "calories": 300,
+      "protein_g": 8,
+      "carbs_g": 34,
+      "fat_g": 16,
+      "fiber_g": 8,
+      "vitamins": [
+         "Vitamin E",
+         "Vitamin C",
+         "Folate",
+         ""
+      ],
+      "minerals": {
+         "Iron": "",
+         "Calcium": "",
+         "Magnesium": "12%",
+         "Potassium": "15%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 50,
+      "nutrient_density_score": 8.4
+   }
+},
+ {
+   "id": 21,
+   "name": "Greek Yogurt Parfait",
+   "type": "",
+   "cuisine": "Mediterranean",
+   "ingredients": [
+      {
+         "name": "Greek yogurt",
+         "quantity": "1 cup",
+         "note": "Guru, cooling, Pitta pacifying"
+      },
+      {
+         "name": "Fresh fruits (berries, banana)",
+         "quantity": "1/2 cup",
+         "note": "Madhura rasa, energizing, balances Vata"
+      },
+      {
+         "name": "Honey",
+         "quantity": "1 tsp",
+         "note": "Madhura rasa, rejuvenating"
+      },
+      {
+         "name": "Granola",
+         "quantity": "2 tbsp",
+         "note": "Grounding, may increase Kapha"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Layer yogurt, fruits, and granola in a glass.",
+      "Drizzle with honey.",
+      "Serve chilled as a breakfast or snack.",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Amla",
+         ""
+      ],
+      "virya": "Sheeta",
+      "vipaka": "Madhura",
+      "prabhava": "Cooling and probiotic-rich",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Guru",
+         "Snigdha"
+      ],
+      "guna_properties": "Cooling and nourishing with probiotic benefits"
+   },
+   "health_benefits": [
+      "Rich in protein and probiotics",
+      "Balances gut microbiome",
+      "Excellent cooling snack for summer",
+      ""
+   ],
+   "nutrition_profile": {
+      "calories": 220,
+      "protein_g": 12,
+      "carbs_g": 32,
+      "fat_g": 6,
+      "fiber_g": 4,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin B12",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "",
+         "Calcium": "18%",
+         "Magnesium": "",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "12%",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 40,
+      "nutrient_density_score": 7.9
+   }
+},
+ {
+   "id": 22,
+   "name": "Quinoa Vegetable Bowl",
+   "type": "Main Course",
+   "cuisine": "Global Fusion",
+   "ingredients": [
+      {
+         "name": "Quinoa",
+         "quantity": "1 cup",
+         "note": "Laghu, high protein, balances Kapha"
+      },
+      {
+         "name": "Mixed vegetables (broccoli, carrot, beans)",
+         "quantity": "1 cup",
+         "note": "Tridosha balancing"
+      },
+      {
+         "name": "Olive oil",
+         "quantity": "1 tbsp",
+         "note": "Snigdha, Pitta friendly"
+      },
+      {
+         "name": "Lemon juice",
+         "quantity": "1 tbsp",
+         "note": "Amla rasa, digestive stimulant"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Cook quinoa until fluffy.",
+      "Sauté vegetables lightly in olive oil.",
+      "Mix with quinoa, season with lemon and herbs.",
+      "Serve warm as a balanced lunch/dinner.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Light global alternative to rice",
+      "dosha_effect": {
+         "Vata": "neutral",
+         "Pitta": "↓",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         ""
+      ],
+      "guna_properties": "High protein, gluten-free grain that provides sustained energy"
+   },
+   "health_benefits": [
+      "High protein, gluten-free option",
+      "Balances Kapha, good for weight management",
+      "Supports muscle repair and digestion",
+      "Rich in essential amino acids"
+   ],
+   "nutrition_profile": {
+      "calories": 280,
+      "protein_g": 10,
+      "carbs_g": 42,
+      "fat_g": 9,
+      "fiber_g": 6,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin K",
+         "Folate",
+         ""
+      ],
+      "minerals": {
+         "Iron": "8%",
+         "Calcium": "",
+         "Magnesium": "15%",
+         "Potassium": "",
+         "Zinc": "12%",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 53,
+      "nutrient_density_score": 8.1
+   }
+},
+ {
+   "id": 23,
+   "name": "Avocado Toast with Seeds",
+   "type": "Breakfast",
+   "cuisine": "Western",
+   "ingredients": [
+      {
+         "name": "Whole grain bread",
+         "quantity": "2 slices",
+         "note": "Guru, nourishing, Kapha increasing"
+      },
+      {
+         "name": "Avocado",
+         "quantity": "1/2 fruit",
+         "note": "Snigdha, balances Vata, may increase Kapha"
+      },
+      {
+         "name": "Pumpkin & sesame seeds",
+         "quantity": "1 tbsp each",
+         "note": "Balancing, grounding, supports Ojas"
+      },
+      {
+         "name": "Lemon juice",
+         "quantity": "1 tsp",
+         "note": "Amla rasa, aids digestion"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Toast bread slices.",
+      "Mash avocado with lemon juice and seasonings.",
+      "Spread on toast, sprinkle seeds.",
+      "Serve as a quick breakfast/snack.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Amla",
+         ""
+      ],
+      "virya": "Shita (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Grounding and nourishing breakfast",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Unctuous (Snigdha)"
+      ],
+      "guna_properties": "Rich in healthy fats that nourish tissues and support hormone production"
+   },
+   "health_benefits": [
+      "Rich in healthy fats and fiber",
+      "Supports skin and immunity",
+      "Good breakfast for Vata and Pitta",
+      "Provides sustained energy"
+   ],
+   "nutrition_profile": {
+      "calories": 300,
+      "protein_g": 8,
+      "carbs_g": 34,
+      "fat_g": 16,
+      "fiber_g": 8,
+      "vitamins": [
+         "Vitamin E",
+         "Vitamin C",
+         "Folate",
+         ""
+      ],
+      "minerals": {
+         "Iron": "6%",
+         "Calcium": "",
+         "Magnesium": "12%",
+         "Potassium": "18%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 50,
+      "nutrient_density_score": 8.4
+   }
+},
+ {
+   "id": 24,
+   "name": "Greek Yogurt Parfait",
+   "type": "Breakfast",
+   "cuisine": "Mediterranean",
+   "ingredients": [
+      {
+         "name": "Greek yogurt",
+         "quantity": "1 cup",
+         "note": "Guru, cooling, Pitta pacifying"
+      },
+      {
+         "name": "Fresh fruits (berries, banana)",
+         "quantity": "1/2 cup",
+         "note": "Madhura rasa, energizing, balances Vata"
+      },
+      {
+         "name": "Honey",
+         "quantity": "1 tsp",
+         "note": "Madhura rasa, rejuvenating"
+      },
+      {
+         "name": "Granola",
+         "quantity": "2 tbsp",
+         "note": "Grounding, may increase Kapha"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Layer yogurt, fruits, and granola in a glass.",
+      "Drizzle with honey.",
+      "Serve chilled as a breakfast or snack.",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Amla",
+         ""
+      ],
+      "virya": "Shita (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Cooling and probiotic-rich",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Unctuous (Snigdha)"
+      ],
+      "guna_properties": "Cooling and nourishing, excellent for supporting digestive health"
+   },
+   "health_benefits": [
+      "Rich in protein and probiotics",
+      "Balances gut microbiome",
+      "Excellent cooling snack for summer",
+      "Supports bone health"
+   ],
+   "nutrition_profile": {
+      "calories": 220,
+      "protein_g": 12,
+      "carbs_g": 32,
+      "fat_g": 6,
+      "fiber_g": 4,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin B12",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "",
+         "Calcium": "20%",
+         "Magnesium": "",
+         "Potassium": "8%",
+         "Zinc": "",
+         "Phosphorus": "15%",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 40,
+      "nutrient_density_score": 7.9
+   }
+},
+ {
+   "id": 25,
+   "name": "Vegetable Sushi Rolls",
+   "type": "Main Course",
+   "cuisine": "Japanese",
+   "ingredients": [
+      {
+         "name": "Sushi rice",
+         "quantity": "1 cup",
+         "note": "Guru, cooling, may increase Kapha"
+      },
+      {
+         "name": "Seaweed (nori)",
+         "quantity": "2 sheets",
+         "note": "Balances Pitta, rich in minerals"
+      },
+      {
+         "name": "Vegetables (cucumber, carrot, avocado)",
+         "quantity": "1/2 cup",
+         "note": "Light, refreshing, balances Pitta"
+      },
+      {
+         "name": "Soy sauce (optional)",
+         "quantity": "1 tsp",
+         "note": "Salty, Kapha increasing"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Cook sushi rice and season lightly.",
+      "Spread rice over nori, add vegetables.",
+      "Roll tightly and slice into pieces.",
+      "Serve with soy sauce if desired.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Lavana",
+         ""
+      ],
+      "virya": "Shita (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Refreshing, light meal",
+      "dosha_effect": {
+         "Vata": "neutral",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Light (Laghu)",
+         ""
+      ],
+      "guna_properties": "Light and cooling, rich in sea minerals"
+   },
+   "health_benefits": [
+      "Light, mineral-rich lunch/dinner",
+      "Cooling, good for summer",
+      "Supports digestion and immunity",
+      "Rich in iodine and trace minerals"
+   ],
+   "nutrition_profile": {
+      "calories": 190,
+      "protein_g": 5,
+      "carbs_g": 36,
+      "fat_g": 4,
+      "fiber_g": 3,
+      "vitamins": [
+         "Vitamin A",
+         "Vitamin C",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "4%",
+         "Calcium": "",
+         "Magnesium": "8%",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "25%",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 55,
+      "nutrient_density_score": 7.2
+   }
+},
+ {
+   "id": 26,
+   "name": "Lentil Soup",
+   "type": "Soup",
+   "cuisine": "Middle Eastern",
+   "ingredients": [
+      {
+         "name": "Red lentils",
+         "quantity": "1 cup",
+         "note": "Laghu, balances Vata & Pitta"
+      },
+      {
+         "name": "Olive oil",
+         "quantity": "1 tbsp",
+         "note": "Snigdha, Pitta pacifying"
+      },
+      {
+         "name": "Onion, garlic, cumin",
+         "quantity": "1 tsp each",
+         "note": "Agni deepana, clears Kapha"
+      },
+      {
+         "name": "Lemon juice",
+         "quantity": "1 tbsp",
+         "note": "Amla rasa, enhances digestion"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Cook lentils until soft.",
+      "Blend lightly for creaminess.",
+      "Sauté onion, garlic, cumin in olive oil, add to soup.",
+      "Finish with lemon juice.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Tikta",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Protein-rich light meal",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         ""
+      ],
+      "guna_properties": "Easily digestible protein source that builds strength without heaviness"
+   },
+   "health_benefits": [
+      "Excellent protein source",
+      "Balances Vata and Kapha",
+      "Improves digestion and immunity",
+      "Rich in folate and iron"
+   ],
+   "nutrition_profile": {
+      "calories": 210,
+      "protein_g": 14,
+      "carbs_g": 32,
+      "fat_g": 5,
+      "fiber_g": 7,
+      "vitamins": [
+         "Folate",
+         "Vitamin B6",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "18%",
+         "Calcium": "",
+         "Magnesium": "",
+         "Potassium": "12%",
+         "Zinc": "10%",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 32,
+      "nutrient_density_score": 9
+   }
+},
+ {
+   "id": 27,
+   "name": "Vegetable Stir-Fry with Tofu",
+   "type": "Main Course",
+   "cuisine": "Asian Fusion",
+   "ingredients": [
+      {
+         "name": "Tofu",
+         "quantity": "1 cup",
+         "note": "Guru, nourishing, Kapha increasing"
+      },
+      {
+         "name": "Mixed vegetables (broccoli, bell peppers, beans)",
+         "quantity": "1 cup",
+         "note": "Tridosha balancing"
+      },
+      {
+         "name": "Soy sauce & ginger",
+         "quantity": "1 tbsp + 1 tsp",
+         "note": "Agni stimulating, Kapha balancing"
+      },
+      {
+         "name": "Sesame oil",
+         "quantity": "1 tbsp",
+         "note": "Snigdha, grounding"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Sauté tofu cubes until golden.",
+      "Add vegetables and stir-fry with ginger.",
+      "Add soy sauce and sesame oil, cook lightly.",
+      "Serve hot with rice or quinoa.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Lavana",
+         ""
+      ],
+      "virya": "Shita (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Protein-rich dinner option",
+      "dosha_effect": {
+         "Vata": "neutral",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         ""
+      ],
+      "guna_properties": "Cooling protein that supports tissue building and hormone balance"
+   },
+   "health_benefits": [
+      "Rich plant-based protein",
+      "Balances Pitta heat",
+      "Supports bone health and digestion",
+      "Contains isoflavones for hormonal balance"
+   ],
+   "nutrition_profile": {
+      "calories": 280,
+      "protein_g": 16,
+      "carbs_g": 20,
+      "fat_g": 16,
+      "fiber_g": 5,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin K",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "12%",
+         "Calcium": "15%",
+         "Magnesium": "10%",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 40,
+      "nutrient_density_score": 8.3
+   }
+},
+ {
+   "id": 28,
+   "name": "Vegetable Minestrone Soup",
+   "type": "Soup",
+   "cuisine": "Italian",
+   "ingredients": [
+      {
+         "name": "Mixed vegetables",
+         "quantity": "1 cup",
+         "note": "Tridosha balancing, light"
+      },
+      {
+         "name": "Beans",
+         "quantity": "1/2 cup",
+         "note": "Guru, nourishing, Kapha increasing"
+      },
+      {
+         "name": "Pasta (whole wheat)",
+         "quantity": "1/2 cup",
+         "note": "Grounding, Vata balancing"
+      },
+      {
+         "name": "Olive oil & herbs",
+         "quantity": "1 tbsp",
+         "note": "Snigdha, Pitta balancing"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Cook beans and pasta until soft.",
+      "Add vegetables and simmer in broth.",
+      "Season with olive oil and herbs.",
+      "Serve warm.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Tikta",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Hearty and light dinner soup",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Light (Laghu)",
+         ""
+      ],
+      "guna_properties": "Warming and nourishing without being overly heavy"
+   },
+   "health_benefits": [
+      "Rich in fiber and antioxidants",
+      "Good evening meal for digestion",
+      "Balances Vata with warmth",
+      "Provides complex carbohydrates"
+   ],
+   "nutrition_profile": {
+      "calories": 230,
+      "protein_g": 10,
+      "carbs_g": 38,
+      "fat_g": 6,
+      "fiber_g": 7,
+      "vitamins": [
+         "Vitamin A",
+         "Vitamin C",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "14%",
+         "Calcium": "",
+         "Magnesium": "8%",
+         "Potassium": "16%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 55,
+      "nutrient_density_score": 7.6
+   }
+},
+ {
+   "id": 29,
+   "name": "Vegetable Buddha Bowl",
+   "type": "Main Course",
+   "cuisine": "Global Fusion",
+   "ingredients": [
+      {
+         "name": "Brown rice",
+         "quantity": "1 cup",
+         "note": "Guru, nourishing, Kapha increasing"
+      },
+      {
+         "name": "Chickpeas",
+         "quantity": "1/2 cup",
+         "note": "Guru, protein rich, Vata pacifying"
+      },
+      {
+         "name": "Steamed greens",
+         "quantity": "1 cup",
+         "note": "Pitta pacifying, cooling"
+      },
+      {
+         "name": "Tahini dressing",
+         "quantity": "2 tbsp",
+         "note": "Snigdha, grounding, nourishing"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Cook brown rice until fluffy.",
+      "Arrange rice, chickpeas, and greens in a bowl.",
+      "Top with tahini dressing.",
+      "Serve warm.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Shita (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Balanced one-bowl meal",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Unctuous (Snigdha)"
+      ],
+      "guna_properties": "Complete meal providing all macronutrients in balanced proportions"
+   },
+   "health_benefits": [
+      "Balanced macro- and micronutrients",
+      "Supports gut health and satiety",
+      "Good vegetarian meal for lunch/dinner",
+      "Rich in plant-based protein"
+   ],
+   "nutrition_profile": {
+      "calories": 350,
+      "protein_g": 14,
+      "carbs_g": 50,
+      "fat_g": 12,
+      "fiber_g": 10,
+      "vitamins": [
+         "Vitamin B6",
+         "Vitamin K",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "16%",
+         "Calcium": "",
+         "Magnesium": "18%",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "22%",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 45,
+      "nutrient_density_score": 8.5
+   }
+},
+ {
+   "id": 30,
+   "name": "Vegetable Roti Wrap",
+   "type": "Main Course",
+   "cuisine": "Indian Fusion",
+   "ingredients": [
+      {
+         "name": "Whole wheat roti",
+         "quantity": "2",
+         "note": "Guru, grounding, Kapha increasing"
+      },
+      {
+         "name": "Paneer or tofu",
+         "quantity": "100g",
+         "note": "Guru, nourishing, Kapha increasing"
+      },
+      {
+         "name": "Vegetables (lettuce, cucumber, tomato)",
+         "quantity": "1 cup",
+         "note": "Cooling, Pitta pacifying"
+      },
+      {
+         "name": "Mint chutney",
+         "quantity": "2 tbsp",
+         "note": "Ushna, stimulates digestion"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Prepare whole wheat rotis.",
+      "Stuff with paneer/tofu and vegetables.",
+      "Add mint chutney.",
+      "Roll and serve as lunch/dinner.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Katu",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Portable meal",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         ""
+      ],
+      "guna_properties": "Satisfying portable meal that provides sustained energy"
+   },
+   "health_benefits": [
+      "Good protein-carbohydrate balance",
+      "Supports digestion with chutney",
+      "Ideal lunchbox meal",
+      "Rich in complex carbohydrates"
+   ],
+   "nutrition_profile": {
+      "calories": 320,
+      "protein_g": 14,
+      "carbs_g": 40,
+      "fat_g": 12,
+      "fiber_g": 8,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin A",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "12%",
+         "Calcium": "18%",
+         "Magnesium": "",
+         "Potassium": "",
+         "Zinc": "8%",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 50,
+      "nutrient_density_score": 7.8
+   }
+},
+ {
+   "id": 31,
+   "name": "Vegetable Oats Porridge",
+   "type": "Breakfast",
+   "cuisine": "Global Breakfast",
+   "ingredients": [
+      {
+         "name": "Rolled oats",
+         "quantity": "1 cup",
+         "note": "Laghu, Kapha increasing"
+      },
+      {
+         "name": "Milk or almond milk",
+         "quantity": "1 cup",
+         "note": "Guru, nourishing"
+      },
+      {
+         "name": "Carrot, peas, beans",
+         "quantity": "1/2 cup",
+         "note": "Tridosha balancing"
+      },
+      {
+         "name": "Ghee",
+         "quantity": "1 tsp",
+         "note": "Snigdha, Ojas building"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Cook oats with milk until creamy.",
+      "Add vegetables and cook until soft.",
+      "Finish with ghee and mild spices.",
+      "Serve warm as a breakfast.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "",
+         ""
+      ],
+      "virya": "Shita (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Energizing breakfast",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         ""
+      ],
+      "guna_properties": "Nourishing breakfast that provides sustained energy throughout the morning"
+   },
+   "health_benefits": [
+      "High-fiber wholesome breakfast",
+      "Balances Vata and Pitta",
+      "Keeps energy steady in morning",
+      "Rich in beta-glucan for heart health"
+   ],
+   "nutrition_profile": {
+      "calories": 250,
+      "protein_g": 9,
+      "carbs_g": 38,
+      "fat_g": 7,
+      "fiber_g": 5,
+      "vitamins": [
+         "Vitamin B1",
+         "Vitamin D",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "10%",
+         "Calcium": "12%",
+         "Magnesium": "15%",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 55,
+      "nutrient_density_score": 7.7
+   }
+},
+ {
+   "id": 32,
+   "name": "Poha",
+   "type": "Breakfast",
+   "cuisine": "Maharashtrian",
+   "ingredients": [
+      {
+         "name": "Flattened rice (poha)",
+         "quantity": "1 cup",
+         "note": "Laghu, Kapha balancing"
+      },
+      {
+         "name": "Onion, curry leaves, green chili",
+         "quantity": "1 tbsp each",
+         "note": "Agni stimulating"
+      },
+      {
+         "name": "Peanuts",
+         "quantity": "2 tbsp",
+         "note": "Snigdha, nourishing"
+      },
+      {
+         "name": "Lemon juice",
+         "quantity": "1 tsp",
+         "note": "Amla rasa, aids digestion"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Wash poha and drain.",
+      "Sauté onion, curry leaves, chili.",
+      "Add poha, peanuts, cook lightly.",
+      "Finish with lemon juice.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Light and energizing breakfast",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         ""
+      ],
+      "guna_properties": "Easily digestible rice preparation that's light yet satisfying"
+   },
+   "health_benefits": [
+      "Quick, light breakfast",
+      "Balances Kapha with spices",
+      "Good energy booster in mornings",
+      "Rich in carbohydrates for quick energy"
+   ],
+   "nutrition_profile": {
+      "calories": 220,
+      "protein_g": 6,
+      "carbs_g": 38,
+      "fat_g": 6,
+      "fiber_g": 4,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin B6",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "6%",
+         "Calcium": "",
+         "Magnesium": "4%",
+         "Potassium": "8%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 55,
+      "nutrient_density_score": 7.4
+   }
+},
+ {
+   "id": 33,
+   "name": "Vegetable Biryani",
+   "type": "Main Course",
+   "cuisine": "Indian",
+   "ingredients": [
+      {
+         "name": "Basmati rice",
+         "quantity": "1 cup",
+         "note": "Guru, Kapha increasing"
+      },
+      {
+         "name": "Mixed vegetables",
+         "quantity": "1 cup",
+         "note": "Tridosha balancing"
+      },
+      {
+         "name": "Spices (cloves, cardamom, cinnamon)",
+         "quantity": "1 tsp mix",
+         "note": "Ushna, digestion enhancing"
+      },
+      {
+         "name": "Ghee",
+         "quantity": "1 tbsp",
+         "note": "Snigdha, Ojas building"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Cook rice with whole spices.",
+      "Layer with sautéed vegetables and ghee.",
+      "Steam until flavors combine.",
+      "Serve with raita.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Katu",
+         "Tikta"
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Rich and flavorful meal",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         ""
+      ],
+      "guna_properties": "Aromatic spiced rice that provides deep satisfaction and nourishment"
+   },
+   "health_benefits": [
+      "Rich and flavorful meal",
+      "Balances Vata with spices",
+      "Provides satiety and nourishment",
+      "Contains antioxidant spices"
+   ],
+   "nutrition_profile": {
+      "calories": 320,
+      "protein_g": 8,
+      "carbs_g": 55,
+      "fat_g": 9,
+      "fiber_g": 5,
+      "vitamins": [
+         "Vitamin A",
+         "Vitamin C",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "10%",
+         "Calcium": "",
+         "Magnesium": "",
+         "Potassium": "8%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "12%",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 58,
+      "nutrient_density_score": 7.6
+   }
+},
+ {
+   "id": 34,
+   "name": "Vegetable Hakka Noodles",
+   "type": "Main Course",
+   "cuisine": "Indo-Chinese",
+   "ingredients": [
+      {
+         "name": "Noodles",
+         "quantity": "1 cup",
+         "note": "Guru, Kapha increasing"
+      },
+      {
+         "name": "Mixed vegetables",
+         "quantity": "1 cup",
+         "note": "Tridosha balancing"
+      },
+      {
+         "name": "Soy sauce & chili sauce",
+         "quantity": "1 tbsp",
+         "note": "Ushna, Kapha reducing"
+      },
+      {
+         "name": "Sesame oil",
+         "quantity": "1 tbsp",
+         "note": "Snigdha, nourishing"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Boil noodles until soft.",
+      "Stir-fry vegetables with sauces.",
+      "Toss noodles and sesame oil.",
+      "Serve hot.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Amla",
+         "Katu"
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Quick satisfying dinner",
+      "dosha_effect": {
+         "Vata": "neutral",
+         "Pitta": "↑",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         ""
+      ],
+      "guna_properties": "Rich and satisfying but can be heavy for digestion"
+   },
+   "health_benefits": [
+      "Quick satisfying dinner",
+      "Provides energy and warmth",
+      "Kapha heavy, best in moderation",
+      "Good for active individuals"
+   ],
+   "nutrition_profile": {
+      "calories": 300,
+      "protein_g": 9,
+      "carbs_g": 52,
+      "fat_g": 10,
+      "fiber_g": 4,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin B2",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "8%",
+         "Calcium": "",
+         "Magnesium": "",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "10%",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "6%",
+         "Copper": ""
+      },
+      "glycemic_index": 65,
+      "nutrient_density_score": 7
+   }
+},
+ {
+   "id": 35,
+   "name": "Chickpea Salad",
+   "type": "Salad",
+   "cuisine": "Mediterranean",
+   "ingredients": [
+      {
+         "name": "Boiled chickpeas",
+         "quantity": "1 cup",
+         "note": "Guru, protein rich, Vata pacifying"
+      },
+      {
+         "name": "Cucumber, tomato, onion",
+         "quantity": "1 cup",
+         "note": "Cooling, Pitta pacifying"
+      },
+      {
+         "name": "Olive oil & lemon juice",
+         "quantity": "1 tbsp each",
+         "note": "Snigdha + Amla rasa, balancing"
+      },
+      {
+         "name": "Parsley",
+         "quantity": "1 tbsp",
+         "note": "Agni stimulating, Kapha reducing"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Mix chickpeas with vegetables.",
+      "Add olive oil, lemon juice, parsley.",
+      "Toss and serve chilled.",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Amla",
+         ""
+      ],
+      "virya": "Shita (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Cooling protein-rich meal",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         ""
+      ],
+      "guna_properties": "Cooling and grounding, excellent for hot weather"
+   },
+   "health_benefits": [
+      "Excellent plant protein",
+      "Cooling, refreshing summer meal",
+      "Supports digestion and immunity",
+      "Rich in fiber and folate"
+   ],
+   "nutrition_profile": {
+      "calories": 260,
+      "protein_g": 12,
+      "carbs_g": 34,
+      "fat_g": 9,
+      "fiber_g": 9,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin K",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "15%",
+         "Calcium": "",
+         "Magnesium": "18%",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "25%",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 35,
+      "nutrient_density_score": 8.5
+   }
+},
+ {
+   "id": 36,
+   "name": "Vegetable Clear Soup",
+   "type": "Soup",
+   "cuisine": "Asian",
+   "ingredients": [
+      {
+         "name": "Mixed vegetables (carrot, beans, cabbage)",
+         "quantity": "1 cup",
+         "note": "Light, Laghu, Tridosha balancing"
+      },
+      {
+         "name": "Ginger & garlic",
+         "quantity": "1 tsp each",
+         "note": "Agni deepana, Kapha pacifying"
+      },
+      {
+         "name": "Soy sauce",
+         "quantity": "1 tsp",
+         "note": "Salty, Kapha increasing"
+      },
+      {
+         "name": "Olive oil",
+         "quantity": "1 tsp",
+         "note": "Snigdha, nourishing"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Boil vegetables until tender.",
+      "Add ginger, garlic, soy sauce.",
+      "Simmer briefly and serve hot.",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Tikta",
+         "Katu",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Katu (Pungent)",
+      "prabhava": "Light detox meal",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         ""
+      ],
+      "guna_properties": "Very light and easily digestible, perfect for cleansing"
+   },
+   "health_benefits": [
+      "Light detox meal",
+      "Supports digestion",
+      "Good dinner for weight loss",
+      "Hydrating and warming"
+   ],
+   "nutrition_profile": {
+      "calories": 120,
+      "protein_g": 4,
+      "carbs_g": 18,
+      "fat_g": 4,
+      "fiber_g": 3,
+      "vitamins": [
+         "Vitamin A",
+         "Vitamin C",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "",
+         "Calcium": "6%",
+         "Magnesium": "4%",
+         "Potassium": "10%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 35,
+      "nutrient_density_score": 7.8
+   }
+},
+ {
+   "id": 37,
+   "name": "Falafel Wrap",
+   "type": "Main Course",
+   "cuisine": "Middle Eastern",
+   "ingredients": [
+      {
+         "name": "Pita bread",
+         "quantity": "1",
+         "note": "Guru, Kapha increasing"
+      },
+      {
+         "name": "Falafel balls (chickpea)",
+         "quantity": "03-Apr",
+         "note": "Guru, protein rich"
+      },
+      {
+         "name": "Tahini sauce",
+         "quantity": "2 tbsp",
+         "note": "Snigdha, nourishing"
+      },
+      {
+         "name": "Vegetables (lettuce, tomato, cucumber)",
+         "quantity": "1 cup",
+         "note": "Cooling, Pitta pacifying"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Warm pita bread.",
+      "Stuff with falafel, vegetables, tahini sauce.",
+      "Roll into wrap and serve.",
+      "",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Lavana",
+         ""
+      ],
+      "virya": "Shita (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Protein-rich portable meal",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Unctuous (Snigdha)"
+      ],
+      "guna_properties": "Satisfying and nourishing, good for building strength"
+   },
+   "health_benefits": [
+      "Protein-rich meal",
+      "Cooling and nourishing",
+      "Good lunch or dinner wrap",
+      "Contains healthy fats from tahini"
+   ],
+   "nutrition_profile": {
+      "calories": 350,
+      "protein_g": 14,
+      "carbs_g": 46,
+      "fat_g": 14,
+      "fiber_g": 8,
+      "vitamins": [
+         "Vitamin B6",
+         "Vitamin C",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "16%",
+         "Calcium": "8%",
+         "Magnesium": "15%",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 45,
+      "nutrient_density_score": 8.1
+   }
+},
+ {
+   "id": 38,
+   "name": "Vegetable Omelette",
+   "type": "Breakfast",
+   "cuisine": "Global",
+   "ingredients": [
+      {
+         "name": "Eggs",
+         "quantity": "2",
+         "note": "Guru, nourishing, Kapha increasing"
+      },
+      {
+         "name": "Onion, tomato, spinach",
+         "quantity": "1/2 cup",
+         "note": "Tridosha balancing"
+      },
+      {
+         "name": "Black pepper",
+         "quantity": "1/4 tsp",
+         "note": "Agni stimulating, Kapha reducing"
+      },
+      {
+         "name": "Ghee/oil",
+         "quantity": "1 tsp",
+         "note": "Snigdha, Ojas building"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Whisk eggs with salt and pepper.",
+      "Add vegetables and cook in ghee/oil.",
+      "Fold into omelette.",
+      "Serve hot.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Katu",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "High protein breakfast",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         ""
+      ],
+      "guna_properties": "Rich in complete proteins and essential amino acids"
+   },
+   "health_benefits": [
+      "High protein breakfast",
+      "Supports muscle health",
+      "Balances Vata with warmth",
+      "Rich in B vitamins and choline"
+   ],
+   "nutrition_profile": {
+      "calories": 210,
+      "protein_g": 14,
+      "carbs_g": 4,
+      "fat_g": 16,
+      "fiber_g": 2,
+      "vitamins": [
+         "Vitamin A",
+         "Vitamin D",
+         "Vitamin B12",
+         ""
+      ],
+      "minerals": {
+         "Iron": "8%",
+         "Calcium": "",
+         "Magnesium": "",
+         "Potassium": "",
+         "Zinc": "6%",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "22%",
+         "Copper": ""
+      },
+      "glycemic_index": 0,
+      "nutrient_density_score": 8.7
+   }
+},
+ {
+   "id": 39,
+   "name": "Vegetable Pasta in Tomato Sauce",
+   "type": "Main Course",
+   "cuisine": "Italian",
+   "ingredients": [
+      {
+         "name": "Whole wheat pasta",
+         "quantity": "1 cup",
+         "note": "Guru, Vata balancing"
+      },
+      {
+         "name": "Tomato sauce",
+         "quantity": "1/2 cup",
+         "note": "Amla rasa, Pitta increasing"
+      },
+      {
+         "name": "Mixed vegetables",
+         "quantity": "1 cup",
+         "note": "Tridosha balancing"
+      },
+      {
+         "name": "Olive oil",
+         "quantity": "1 tbsp",
+         "note": "Snigdha, Pitta pacifying"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Cook pasta until al dente.",
+      "Prepare tomato sauce with vegetables.",
+      "Mix pasta with sauce and olive oil.",
+      "Serve warm.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Amla",
+         ""
+      ],
+      "virya": "Shita (Cooling)",
+      "vipaka": "Amla (Sour)",
+      "prabhava": "Wholesome comfort meal",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↑",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         ""
+      ],
+      "guna_properties": "Satisfying and comforting, but can increase acidity"
+   },
+   "health_benefits": [
+      "Wholesome meal",
+      "Rich in fiber and plant nutrients",
+      "Energizing lunch or dinner",
+      "Contains lycopene from tomatoes"
+   ],
+   "nutrition_profile": {
+      "calories": 310,
+      "protein_g": 10,
+      "carbs_g": 54,
+      "fat_g": 9,
+      "fiber_g": 7,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin K",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "10%",
+         "Calcium": "",
+         "Magnesium": "",
+         "Potassium": "14%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "16%",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 55,
+      "nutrient_density_score": 7.9
+   }
+},
+ {
+   "id": 40,
+   "name": "Millet Coconut Pancakes",
+   "type": "Breakfast",
+   "cuisine": "South Indian Fusion",
+   "ingredients": [
+      {
+         "name": "Finger millet flour",
+         "quantity": "1 cup",
+         "note": "Warming, balances Vata and Kapha"
+      },
+      {
+         "name": "Fresh coconut (grated)",
+         "quantity": "1/2 cup",
+         "note": "Cooling, nourishing for Pitta"
+      },
+      {
+         "name": "Jaggery",
+         "quantity": "2 tbsp",
+         "note": "Natural sweetener, warming"
+      },
+      {
+         "name": "Cardamom powder",
+         "quantity": "1/4 tsp",
+         "note": "Digestive, aromatic"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Mix millet flour with water to form smooth batter.",
+      "Add grated coconut, jaggery, and cardamom.",
+      "Cook on medium heat like pancakes until golden.",
+      "Serve warm with honey or ghee.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Strength-building breakfast option",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Unctuous (Snigdha)"
+      ],
+      "guna_properties": "Nourishing and grounding, provides sustained energy"
+   },
+   "health_benefits": [
+      "Rich in calcium and iron",
+      "Supports bone health",
+      "Balances blood sugar levels",
+      "Provides sustained energy"
+   ],
+   "nutrition_profile": {
+      "calories": 240,
+      "protein_g": 6,
+      "carbs_g": 38,
+      "fat_g": 8,
+      "fiber_g": 4,
+      "vitamins": [
+         "Vitamin B6",
+         "Vitamin E",
+         "Folate",
+         ""
+      ],
+      "minerals": {
+         "Iron": "12%",
+         "Calcium": "15%",
+         "Magnesium": "18%",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 52,
+      "nutrient_density_score": 7.6
+   }
+},
+ {
+   "id": 41,
+   "name": "Amaranth Leaf Curry",
+   "type": "Side Dish",
+   "cuisine": "Indian",
+   "ingredients": [
+      {
+         "name": "Fresh amaranth leaves",
+         "quantity": "2 cups",
+         "note": "Cooling, rich in minerals"
+      },
+      {
+         "name": "Coconut oil",
+         "quantity": "1 tbsp",
+         "note": "Cooling, Pitta pacifying"
+      },
+      {
+         "name": "Mustard seeds",
+         "quantity": "1 tsp",
+         "note": "Heating, stimulates Agni"
+      },
+      {
+         "name": "Red chilies",
+         "quantity": "2",
+         "note": "Heating, Kapha reducing"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Clean and chop amaranth leaves finely.",
+      "Heat coconut oil, add mustard seeds and red chilies.",
+      "Add chopped leaves, sauté until wilted.",
+      "Season with salt and serve with rice.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Tikta",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Sheeta (Cooling)",
+      "vipaka": "Katu (Pungent)",
+      "prabhava": "Blood purifying and cooling",
+      "dosha_effect": {
+         "Vata": "↑",
+         "Pitta": "↓",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         "Dry (Ruksha)"
+      ],
+      "guna_properties": "Detoxifying and light, excellent for cleansing"
+   },
+   "health_benefits": [
+      "Rich in antioxidants",
+      "Supports liver detoxification",
+      "Improves skin health",
+      "High in folate and vitamin C"
+   ],
+   "nutrition_profile": {
+      "calories": 80,
+      "protein_g": 4,
+      "carbs_g": 8,
+      "fat_g": 4,
+      "fiber_g": 3,
+      "vitamins": [
+         "Vitamin A",
+         "Vitamin C",
+         "Folate",
+         "Vitamin K"
+      ],
+      "minerals": {
+         "Iron": "20%",
+         "Calcium": "12%",
+         "Magnesium": "",
+         "Potassium": "15%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 25,
+      "nutrient_density_score": 8.9
+   }
+},
+ {
+   "id": 42,
+   "name": "Barley Vegetable Risotto",
+   "type": "Main Course",
+   "cuisine": "Mediterranean Fusion",
+   "ingredients": [
+      {
+         "name": "Pearl barley",
+         "quantity": "1 cup",
+         "note": "Cooling, high fiber"
+      },
+      {
+         "name": "Seasonal vegetables",
+         "quantity": "1.5 cups",
+         "note": "Tridoshic balancing"
+      },
+      {
+         "name": "Ghee",
+         "quantity": "1 tbsp",
+         "note": "Digestive, grounding"
+      },
+      {
+         "name": "Fresh herbs (basil, parsley)",
+         "quantity": "1/4 cup",
+         "note": "Aromatic, digestive"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Soak barley for 2 hours, then cook until tender.",
+      "Sauté vegetables in ghee until soft.",
+      "Mix cooked barley with vegetables.",
+      "Garnish with fresh herbs and serve warm.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Sheeta (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Cooling and satisfying meal",
+      "dosha_effect": {
+         "Vata": "neutral",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Smooth (Snigdha)"
+      ],
+      "guna_properties": "Filling and cooling, good for Pitta constitution"
+   },
+   "health_benefits": [
+      "High in soluble fiber",
+      "Supports heart health",
+      "Helps regulate blood sugar",
+      "Promotes satiety"
+   ],
+   "nutrition_profile": {
+      "calories": 290,
+      "protein_g": 9,
+      "carbs_g": 52,
+      "fat_g": 6,
+      "fiber_g": 8,
+      "vitamins": [
+         "Vitamin A",
+         "Vitamin C",
+         "B-complex",
+         ""
+      ],
+      "minerals": {
+         "Iron": "",
+         "Calcium": "",
+         "Magnesium": "16%",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "18%",
+         "Manganese": "25%",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 42,
+      "nutrient_density_score": 8.1
+   }
+},
+ {
+   "id": 43,
+   "name": "Drumstick Leaves Smoothie",
+   "type": "Beverage",
+   "cuisine": "Modern Ayurvedic",
+   "ingredients": [
+      {
+         "name": "Fresh drumstick leaves",
+         "quantity": "1/2 cup",
+         "note": "Highly nutritious, warming"
+      },
+      {
+         "name": "Coconut water",
+         "quantity": "1 cup",
+         "note": "Cooling, electrolyte rich"
+      },
+      {
+         "name": "Ginger",
+         "quantity": "1/2 inch",
+         "note": "Digestive, warming"
+      },
+      {
+         "name": "Lime juice",
+         "quantity": "1 tbsp",
+         "note": "Digestive stimulant"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Wash drumstick leaves thoroughly.",
+      "Blend all ingredients until smooth.",
+      "Strain if desired for smoother texture.",
+      "Serve immediately for best nutrition.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Tikta",
+         "Katu",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Katu (Pungent)",
+      "prabhava": "Nutritive tonic and energizer",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         "Sharp (Tikshna)"
+      ],
+      "guna_properties": "Energizing and cleansing, boosts vitality"
+   },
+   "health_benefits": [
+      "Extremely high in vitamins and minerals",
+      "Boosts immunity and energy",
+      "Supports healthy digestion",
+      "Rich in antioxidants"
+   ],
+   "nutrition_profile": {
+      "calories": 45,
+      "protein_g": 3,
+      "carbs_g": 8,
+      "fat_g": 0,
+      "fiber_g": 2,
+      "vitamins": [
+         "Vitamin A",
+         "Vitamin C",
+         "Vitamin E",
+         "B-complex"
+      ],
+      "minerals": {
+         "Iron": "15%",
+         "Calcium": "10%",
+         "Magnesium": "",
+         "Potassium": "12%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 20,
+      "nutrient_density_score": 9.5
+   }
+},
+ {
+   "id": 44,
+   "name": "Sweet Potato Halwa",
+   "type": "Dessert",
+   "cuisine": "Indian",
+   "ingredients": [
+      {
+         "name": "Sweet potato",
+         "quantity": "2 medium",
+         "note": "Sweet, nourishing, Vata pacifying"
+      },
+      {
+         "name": "Almond milk",
+         "quantity": "1 cup",
+         "note": "Cooling, nutritious"
+      },
+      {
+         "name": "Ghee",
+         "quantity": "2 tbsp",
+         "note": "Digestive, strength-giving"
+      },
+      {
+         "name": "Saffron strands",
+         "quantity": "pinch",
+         "note": "Cooling, mood enhancing"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Steam and mash sweet potatoes until smooth.",
+      "Cook mashed sweet potato in almond milk.",
+      "Add ghee and saffron, cook until thick.",
+      "Serve warm or chilled as desired.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "",
+         ""
+      ],
+      "virya": "Sheeta (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Nourishing and calming dessert",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Unctuous (Snigdha)"
+      ],
+      "guna_properties": "Deeply nourishing and satisfying, builds Ojas"
+   },
+   "health_benefits": [
+      "Rich in beta-carotene",
+      "Supports eye health",
+      "Natural mood enhancer",
+      "Provides healthy carbohydrates"
+   ],
+   "nutrition_profile": {
+      "calories": 180,
+      "protein_g": 4,
+      "carbs_g": 28,
+      "fat_g": 7,
+      "fiber_g": 3,
+      "vitamins": [
+         "Vitamin A",
+         "Vitamin C",
+         "Vitamin B6",
+         ""
+      ],
+      "minerals": {
+         "Iron": "",
+         "Calcium": "",
+         "Magnesium": "",
+         "Potassium": "20%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "15%",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": "12%"
+      },
+      "glycemic_index": 48,
+      "nutrient_density_score": 7.8
+   }
+},
+ {
+   "id": 45,
+   "name": "Black Sesame Laddu",
+   "type": "Snack",
+   "cuisine": "Traditional Indian",
+   "ingredients": [
+      {
+         "name": "Black sesame seeds",
+         "quantity": "1 cup",
+         "note": "Warming, strength-giving"
+      },
+      {
+         "name": "Jaggery powder",
+         "quantity": "1/2 cup",
+         "note": "Warming, iron-rich"
+      },
+      {
+         "name": "Ghee",
+         "quantity": "2 tbsp",
+         "note": "Binding, nourishing"
+      },
+      {
+         "name": "Cardamom powder",
+         "quantity": "1/2 tsp",
+         "note": "Digestive, aromatic"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Dry roast sesame seeds until fragrant.",
+      "Powder the roasted seeds in a blender.",
+      "Mix with jaggery, ghee, and cardamom.",
+      "Form into small balls and let set.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Tikta",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Strength and bone building",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Unctuous (Snigdha)"
+      ],
+      "guna_properties": "Dense nutrition, builds strength and supports bones"
+   },
+   "health_benefits": [
+      "High in calcium and magnesium",
+      "Supports bone health",
+      "Rich in healthy fats",
+      "Natural energy booster"
+   ],
+   "nutrition_profile": {
+      "calories": 150,
+      "protein_g": 5,
+      "carbs_g": 12,
+      "fat_g": 11,
+      "fiber_g": 2,
+      "vitamins": [
+         "Vitamin E",
+         "B-complex",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "",
+         "Calcium": "18%",
+         "Magnesium": "22%",
+         "Potassium": "",
+         "Zinc": "14%",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 40,
+      "nutrient_density_score": 8.3
+   }
+},
+ {
+   "id": 46,
+   "name": "Bottle Gourd Kofta Curry",
+   "type": "Main Course",
+   "cuisine": "North Indian",
+   "ingredients": [
+      {
+         "name": "Bottle gourd (grated)",
+         "quantity": "2 cups",
+         "note": "Cooling, light, Pitta pacifying"
+      },
+      {
+         "name": "Besan (gram flour)",
+         "quantity": "1/2 cup",
+         "note": "Protein-rich, binding"
+      },
+      {
+         "name": "Yogurt",
+         "quantity": "1/2 cup",
+         "note": "Cooling, probiotic"
+      },
+      {
+         "name": "Cumin and coriander seeds",
+         "quantity": "1 tsp each",
+         "note": "Digestive, cooling"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Mix grated gourd with besan and spices.",
+      "Form small balls and steam for 15 minutes.",
+      "Prepare curry base with yogurt and spices.",
+      "Add steamed koftas to curry and simmer.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Tikta",
+         ""
+      ],
+      "virya": "Sheeta (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Cooling and digestive",
+      "dosha_effect": {
+         "Vata": "neutral",
+         "Pitta": "↓",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         "Smooth (Snigdha)"
+      ],
+      "guna_properties": "Light yet satisfying, cooling and digestive"
+   },
+   "health_benefits": [
+      "Low in calories, high in water content",
+      "Supports healthy digestion",
+      "Cooling for summer",
+      "Rich in vitamin C"
+   ],
+   "nutrition_profile": {
+      "calories": 160,
+      "protein_g": 8,
+      "carbs_g": 22,
+      "fat_g": 4,
+      "fiber_g": 4,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin B6",
+         "Folate",
+         ""
+      ],
+      "minerals": {
+         "Iron": "10%",
+         "Calcium": "8%",
+         "Magnesium": "",
+         "Potassium": "16%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 35,
+      "nutrient_density_score": 7.4
+   }
+},
+ {
+   "id": 47,
+   "name": "Fenugreek Seed Tea",
+   "type": "Beverage",
+   "cuisine": "Ayurvedic",
+   "ingredients": [
+      {
+         "name": "Fenugreek seeds",
+         "quantity": "1 tsp",
+         "note": "Bitter, warming, digestive"
+      },
+      {
+         "name": "Ginger (fresh)",
+         "quantity": "1/2 inch",
+         "note": "Warming, digestive fire enhancer"
+      },
+      {
+         "name": "Lemon juice",
+         "quantity": "1 tsp",
+         "note": "Sour, digestive stimulant"
+      },
+      {
+         "name": "Raw honey",
+         "quantity": "1 tsp",
+         "note": "Sweet, soothing (add after cooling)"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Soak fenugreek seeds overnight.",
+      "Boil soaked seeds with ginger for 10 minutes.",
+      "Strain and add lemon juice.",
+      "Add honey when tea cools to drinking temperature.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Tikta",
+         "Katu",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Katu (Pungent)",
+      "prabhava": "Digestive fire stimulant and detoxifier",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         "Sharp (Tikshna)"
+      ],
+      "guna_properties": "Cleansing and warming, boosts metabolism"
+   },
+   "health_benefits": [
+      "Supports healthy blood sugar levels",
+      "Aids digestion and metabolism",
+      "Anti-inflammatory properties",
+      "Supports lactation in nursing mothers"
+   ],
+   "nutrition_profile": {
+      "calories": 25,
+      "protein_g": 1,
+      "carbs_g": 6,
+      "fat_g": 0,
+      "fiber_g": 1,
+      "vitamins": [
+         "Vitamin C",
+         "B-complex",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "8%",
+         "Calcium": "",
+         "Magnesium": "6%",
+         "Potassium": "4%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 15,
+      "nutrient_density_score": 6.2
+   }
+},
+ {
+   "id": 48,
+   "name": "Jackfruit Seed Curry",
+   "type": "Main Course",
+   "cuisine": "South Indian",
+   "ingredients": [
+      {
+         "name": "Jackfruit seeds",
+         "quantity": "1 cup",
+         "note": "Nutritious, protein-rich"
+      },
+      {
+         "name": "Coconut milk",
+         "quantity": "1 cup",
+         "note": "Cooling, creamy, Pitta pacifying"
+      },
+      {
+         "name": "Curry leaves",
+         "quantity": "10-Dec",
+         "note": "Aromatic, digestive"
+      },
+      {
+         "name": "Turmeric powder",
+         "quantity": "1/2 tsp",
+         "note": "Anti-inflammatory, warming"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Boil jackfruit seeds until tender, remove skin.",
+      "Heat oil, add curry leaves and turmeric.",
+      "Add boiled seeds and sauté lightly.",
+      "Pour coconut milk, simmer until thick.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Sheeta (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Nourishing and cooling",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↓",
+         "Kapha": "↑"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Unctuous (Snigdha)"
+      ],
+      "guna_properties": "Substantial and nourishing, builds body tissues"
+   },
+   "health_benefits": [
+      "High in protein and fiber",
+      "Rich in potassium and magnesium",
+      "Supports muscle health",
+      "Zero waste cooking approach"
+   ],
+   "nutrition_profile": {
+      "calories": 220,
+      "protein_g": 7,
+      "carbs_g": 28,
+      "fat_g": 10,
+      "fiber_g": 5,
+      "vitamins": [
+         "Vitamin A",
+         "Vitamin C",
+         "B-complex",
+         ""
+      ],
+      "minerals": {
+         "Iron": "",
+         "Calcium": "",
+         "Magnesium": "14%",
+         "Potassium": "18%",
+         "Zinc": "",
+         "Phosphorus": "12%",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 38,
+      "nutrient_density_score": 7.9
+   }
+},
+ {
+   "id": 49,
+   "name": "Buckwheat Dosa",
+   "type": "Breakfast",
+   "cuisine": "Fusion Indian",
+   "ingredients": [
+      {
+         "name": "Buckwheat flour",
+         "quantity": "1 cup",
+         "note": "Warming, gluten-free, Kapha reducing"
+      },
+      {
+         "name": "Yogurt",
+         "quantity": "1/2 cup",
+         "note": "Fermentation agent, cooling"
+      },
+      {
+         "name": "Green chilies",
+         "quantity": "2",
+         "note": "Heating, digestive"
+      },
+      {
+         "name": "Ginger (grated)",
+         "quantity": "1 tsp",
+         "note": "Digestive fire enhancer"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Mix buckwheat flour with yogurt and water.",
+      "Add chilies, ginger, salt and ferment 4-6 hours.",
+      "Cook thin crepes on hot griddle with oil.",
+      "Serve with coconut chutney or sambar.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Katu",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Katu (Pungent)",
+      "prabhava": "Digestive and energizing breakfast",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "↑",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         "Dry (Ruksha)"
+      ],
+      "guna_properties": "Light and warming, good for Kapha constitution"
+   },
+   "health_benefits": [
+      "Gluten-free alternative to wheat",
+      "Rich in rutin and quercetin",
+      "Supports heart health",
+      "Good source of protein"
+   ],
+   "nutrition_profile": {
+      "calories": 180,
+      "protein_g": 7,
+      "carbs_g": 32,
+      "fat_g": 3,
+      "fiber_g": 4,
+      "vitamins": [
+         "B-complex",
+         "Vitamin E",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "",
+         "Calcium": "",
+         "Magnesium": "16%",
+         "Potassium": "",
+         "Zinc": "",
+         "Phosphorus": "14%",
+         "Manganese": "24%",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 45,
+      "nutrient_density_score": 7.7
+   }
+},
+ {
+   "id": 50,
+   "name": "Lotus Root Stir-Fry",
+   "type": "Side Dish",
+   "cuisine": "Asian Fusion",
+   "ingredients": [
+      {
+         "name": "Fresh lotus root",
+         "quantity": "2 cups sliced",
+         "note": "Cooling, astringent, Pitta pacifying"
+      },
+      {
+         "name": "Sesame oil",
+         "quantity": "1 tbsp",
+         "note": "Warming, nourishing"
+      },
+      {
+         "name": "Five-spice powder",
+         "quantity": "1/2 tsp",
+         "note": "Warming, digestive blend"
+      },
+      {
+         "name": "Rice vinegar",
+         "quantity": "1 tbsp",
+         "note": "Sour, digestive stimulant"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Slice lotus root into rounds, soak in water.",
+      "Heat sesame oil, add five-spice powder.",
+      "Stir-fry lotus root until crisp-tender.",
+      "Add vinegar and seasonings, toss well.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Kashaya",
+         ""
+      ],
+      "virya": "Sheeta (Cooling)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Cooling and astringent",
+      "dosha_effect": {
+         "Vata": "↑",
+         "Pitta": "↓",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Light (Laghu)",
+         "Dry (Ruksha)"
+      ],
+      "guna_properties": "Cleansing and cooling, good for excess Pitta"
+   },
+   "health_benefits": [
+      "Rich in vitamin C and potassium",
+      "Supports respiratory health",
+      "Low in calories, high in fiber",
+      "Natural detoxifying properties"
+   ],
+   "nutrition_profile": {
+      "calories": 120,
+      "protein_g": 3,
+      "carbs_g": 20,
+      "fat_g": 4,
+      "fiber_g": 5,
+      "vitamins": [
+         "Vitamin C",
+         "Vitamin B6",
+         "Thiamine",
+         ""
+      ],
+      "minerals": {
+         "Iron": "",
+         "Calcium": "",
+         "Magnesium": "",
+         "Potassium": "22%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "14%",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": "16%"
+      },
+      "glycemic_index": 30,
+      "nutrient_density_score": 8.2
+   }
+},
+ {
+   "id": 51,
+   "name": "Ashwagandha Moon Milk",
+   "type": "Beverage",
+   "cuisine": "Modern Ayurvedic",
+   "ingredients": [
+      {
+         "name": "Warm almond milk",
+         "quantity": "1 cup",
+         "note": "Cooling, nourishing, Vata pacifying"
+      },
+      {
+         "name": "Ashwagandha powder",
+         "quantity": "1/2 tsp",
+         "note": "Adaptogenic, strength-giving"
+      },
+      {
+         "name": "Turmeric powder",
+         "quantity": "1/4 tsp",
+         "note": "Anti-inflammatory, warming"
+      },
+      {
+         "name": "Raw honey",
+         "quantity": "1 tsp",
+         "note": "Sweet, calming (add after cooling)"
+      },
+      {
+         "name": "",
+         "quantity": "",
+         "note": ""
+      }
+   ],
+   "instructions": [
+      "Warm almond milk gently, don't boil.",
+      "Whisk in ashwagandha and turmeric powders.",
+      "Let cool to drinking temperature.",
+      "Add honey and stir well before serving.",
+      ""
+   ],
+   "ayurvedic_properties": {
+      "rasa": [
+         "Madhura",
+         "Tikta",
+         ""
+      ],
+      "virya": "Ushna (Heating)",
+      "vipaka": "Madhura (Sweet)",
+      "prabhava": "Adaptogenic tonic and sleep promoter",
+      "dosha_effect": {
+         "Vata": "↓",
+         "Pitta": "neutral",
+         "Kapha": "↓"
+      },
+      "guna": [
+         "Heavy (Guru)",
+         "Unctuous (Snigdha)"
+      ],
+      "guna_properties": "Deeply nourishing and calming, builds Ojas"
+   },
+   "health_benefits": [
+      "Supports stress management",
+      "Promotes restful sleep",
+      "Adaptogenic properties",
+      "Supports immune function"
+   ],
+   "nutrition_profile": {
+      "calories": 90,
+      "protein_g": 3,
+      "carbs_g": 12,
+      "fat_g": 4,
+      "fiber_g": 1,
+      "vitamins": [
+         "Vitamin E",
+         "Vitamin D",
+         "",
+         ""
+      ],
+      "minerals": {
+         "Iron": "",
+         "Calcium": "12%",
+         "Magnesium": "8%",
+         "Potassium": "6%",
+         "Zinc": "",
+         "Phosphorus": "",
+         "Manganese": "",
+         "Iodine": "",
+         "Folate": "",
+         "Selenium": "",
+         "Copper": ""
+      },
+      "glycemic_index": 25,
+      "nutrient_density_score": 6.8
+   }
+}
+]
