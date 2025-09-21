@@ -4,7 +4,7 @@ import { PatientManagement } from './components/PatientManagement';
 import { DietPlanGenerator } from './components/DietPlanGenerator';
 import { RecipeDatabase } from './components/RecipeDatabase';
 import { ReportsGeneration } from './components/ReportsGeneration';
-import { Topbar } from './components/Topbar';
+import { Topbar } from './components/topbar';
 import { LoginForm } from './components/LoginForm';
 import { AuthProvider, useAuth } from './components/AuthProvider';
 import { 
@@ -15,12 +15,6 @@ import {
   FileText,
   Loader2
 } from 'lucide-react';
-import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
-
-// IMPORTANT: Replace with your actual Supabase project URL and anon key.
-const SUPABASE_URL = 'https://yriwxwxrydfyoeslcubo.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlyaXd4d3hyeWRmeW9lc2xjdWJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyNzcxMzcsImV4cCI6MjA3Mzg1MzEzN30.VRm9MhM4t-i3PvuTgwv9i_Nv_C0cZO0u9sc0DOxcJCI';
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const menuItems = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -32,32 +26,7 @@ const menuItems = [
 
 const AppContent: React.FC = () => {
   const [activeSection, setActiveSection] = useState('dashboard');
-  const [recipesData, setRecipesData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const { user, loading: authLoading } = useAuth();
-
-  useEffect(() => {
-    const fetchRecipes = async () => {
-      try {
-        const { data, error } = await supabase
-          .from('recipes')
-          .select('*');
-
-        if (error) {
-          throw error;
-        }
-
-        setRecipesData(data);
-      } catch (err) {
-        setError(err);
-        console.error('Error fetching recipes:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchRecipes();
-  }, []);
 
   useEffect(() => {
     const observeElements = () => {
@@ -97,7 +66,7 @@ const AppContent: React.FC = () => {
       case 'diet-plans':
         return <DietPlanGenerator />;
       case 'recipes':
-        return <RecipeDatabase recipes={recipesData} loading={loading} error={error} />;
+        return <RecipeDatabase />;
       case 'reports':
         return <ReportsGeneration />;
       default:

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -17,8 +17,12 @@ import {
   Settings,
   Clock,
   CheckCircle,
-  BarChart
+  BarChart,
+  Loader2,
+  AlertCircle
 } from 'lucide-react';
+import { Alert, AlertDescription } from './ui/alert';
+import apiService from '../services/api';
 
 const reportTemplates = [
   {
@@ -117,19 +121,40 @@ export function ReportsGeneration() {
               <CardTitle className="text-[#9E7E3D]">Report Configuration</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
+              {error && (
+                <Alert className="mb-4">
+                  <AlertCircle className="h-4 w-4" />
+                  <AlertDescription>{error}</AlertDescription>
+                </Alert>
+              )}
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-sm text-[#4C7A5A]/70">Patient</label>
                   <Select value={selectedPatient} onValueChange={setSelectedPatient}>
                     <SelectTrigger className="border-[#9E7E3D]/20 hover:border-[#F5C24D] transition-colors duration-200">
-                      <SelectValue placeholder="Select patient..." />
+                      <SelectValue placeholder={loading ? "Loading patients..." : "Select patient..."} />
                     </SelectTrigger>
                     <SelectContent>
-                      {samplePatients.map(patient => (
-                        <SelectItem key={patient.id} value={patient.id}>
-                          {patient.name} ({patient.dosha})
+                      {loading ? (
+                        <SelectItem value="loading" disabled>
+                          <div className="flex items-center">
+                            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                            Loading...
+                          </div>
                         </SelectItem>
-                      ))}
+                      ) : (
+                        patients.map(patient => {
+                          const patientId = patient._id || patient.id;
+                          const patientName = patient.fullName || patient.name;
+                          const patientDosha = patient.primaryDosha || patient.dosha;
+                          return (
+                            <SelectItem key={patientId} value={patientId}>
+                              {patientName} ({patientDosha})
+                            </SelectItem>
+                          );
+                        })
+                      )}
                     </SelectContent>
                   </Select>
                 </div>

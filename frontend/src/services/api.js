@@ -126,6 +126,11 @@ class ApiService {
     return this.put(`/patients/${patientId}/visits/${visitId}`, visitData);
   }
 
+  // Patient Search API methods
+  async searchPatients(query, params = {}) {
+    return this.get('/patients/search', { q: query, ...params });
+  }
+
   // Recipe API methods
   async getRecipes(params = {}) {
     return this.get('/recipes', params);
