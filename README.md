@@ -376,4 +376,4 @@ Performance Improvements
 
 Built with ❤️ for the Ayurvedic community
 
-AyurSync - Sync your diet, Balance your lif
+AyurSync - Sync your diet, Balance your life
