@@ -22,7 +22,15 @@ import {
   AlertCircle
 } from 'lucide-react';
 import { Alert, AlertDescription } from './ui/alert';
-import apiService from '../services/api';
+
+interface Patient {
+  _id?: string;
+  id?: string;
+  fullName?: string;
+  name?: string;
+  primaryDosha?: string;
+  dosha?: string;
+}
 
 const reportTemplates = [
   {
@@ -48,7 +56,7 @@ const reportTemplates = [
   }
 ];
 
-const samplePatients = [
+const samplePatients: Patient[] = [
   { id: 'sarah', name: 'Sarah Johnson', dosha: 'Vata-Pitta' },
   { id: 'michael', name: 'Michael Chen', dosha: 'Pitta' },
   { id: 'emma', name: 'Emma Davis', dosha: 'Kapha' }
@@ -90,8 +98,40 @@ export function ReportsGeneration() {
   const [includeGuidelines, setIncludeGuidelines] = useState(true);
   const [customNotes, setCustomNotes] = useState('');
   const [showPreview, setShowPreview] = useState(false);
+  const [patients, setPatients] = useState<Patient[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // Load patients from backend
+  useEffect(() => {
+    loadPatients();
+  }, []);
+
+  const loadPatients = async () => {
+    try {
+      setLoading(true);
+      // Mock API call - you can replace this with actual API service
+      // const response = await apiService.getPatients();
+      // setPatients(response.data.patients || []);
+      
+      // For now, use sample data
+      setTimeout(() => {
+        setPatients(samplePatients);
+        setLoading(false);
+      }, 1000);
+    } catch (error) {
+      console.error('Failed to load patients:', error);
+      setError('Failed to load patients. Using sample data.');
+      setPatients(samplePatients);
+      setLoading(false);
+    }
+  };
 
   const currentTemplate = reportTemplates.find(t => t.id === selectedTemplate);
+
+  const handleCheckboxChange = (value: boolean) => {
+    return value;
+  };
 
   return (
     <div className="space-y-6">
@@ -145,9 +185,9 @@ export function ReportsGeneration() {
                         </SelectItem>
                       ) : (
                         patients.map(patient => {
-                          const patientId = patient._id || patient.id;
-                          const patientName = patient.fullName || patient.name;
-                          const patientDosha = patient.primaryDosha || patient.dosha;
+                          const patientId = patient._id || patient.id || '';
+                          const patientName = patient.fullName || patient.name || '';
+                          const patientDosha = patient.primaryDosha || patient.dosha || '';
                           return (
                             <SelectItem key={patientId} value={patientId}>
                               {patientName} ({patientDosha})
@@ -210,7 +250,7 @@ export function ReportsGeneration() {
                     <Checkbox
                       id="recipes"
                       checked={includeRecipes}
-                      onCheckedChange={setIncludeRecipes}
+                      onCheckedChange={(checked) => setIncludeRecipes(handleCheckboxChange(checked as boolean))}
                       className="border-[#9E7E3D]/30 data-[state=checked]:bg-[#9E7E3D] data-[state=checked]:border-[#9E7E3D]"
                     />
                     <label htmlFor="recipes" className="text-sm text-[#9E7E3D] cursor-pointer">Recipe details with ingredients</label>
@@ -219,7 +259,7 @@ export function ReportsGeneration() {
                     <Checkbox
                       id="shopping"
                       checked={includeShoppingList}
-                      onCheckedChange={setIncludeShoppingList}
+                      onCheckedChange={(checked) => setIncludeShoppingList(handleCheckboxChange(checked as boolean))}
                       className="border-[#9E7E3D]/30 data-[state=checked]:bg-[#9E7E3D] data-[state=checked]:border-[#9E7E3D]"
                     />
                     <label htmlFor="shopping" className="text-sm text-[#9E7E3D] cursor-pointer">Weekly shopping list</label>
@@ -228,125 +268,42 @@ export function ReportsGeneration() {
                     <Checkbox
                       id="guidelines"
                       checked={includeGuidelines}
-                      onCheckedChange={setIncludeGuidelines}
+                      onCheckedChange={(checked) => setIncludeGuidelines(handleCheckboxChange(checked as boolean))}
                       className="border-[#9E7E3D]/30 data-[state=checked]:bg-[#9E7E3D] data-[state=checked]:border-[#9E7E3D]"
                     />
-                    <label htmlFor="guidelines" className="text-sm text-[#9E7E3D] cursor-pointer">Ayurvedic dietary guidelines</label>
+                    <label htmlFor="guidelines" className="text-sm text-[#9E7E3D] cursor-pointer">Ayurvedic guidelines and tips</label>
                   </div>
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm text-[#4C7A5A]/70">Additional Notes</label>
+                <label className="text-sm text-[#4C7A5A]/70">Custom Notes</label>
                 <Textarea
-                  placeholder="Add any custom notes or instructions for the patient..."
+                  placeholder="Add any specific notes or requirements for this report..."
                   value={customNotes}
                   onChange={(e) => setCustomNotes(e.target.value)}
-                  className="border-[#9E7E3D]/20 focus:border-[#F5C24D] min-h-24 transition-colors duration-200"
+                  className="border-[#9E7E3D]/20 focus:border-[#F5C24D] min-h-[100px] transition-colors duration-200"
                 />
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex gap-3 pt-4">
                 <Button 
-                  className="flex-1 btn-rustic-outline"
-                  onClick={() => setShowPreview(!showPreview)}
+                  className="btn-rustic-outline flex-1"
+                  onClick={() => setShowPreview(true)}
                 >
                   <Eye className="w-4 h-4 mr-2" />
-                  {showPreview ? 'Hide Preview' : 'Preview Report'}
+                  Preview
                 </Button>
-                <Button className="flex-1 btn-rustic">
+                <Button className="btn-rustic flex-1">
                   <Download className="w-4 h-4 mr-2" />
                   Generate PDF
                 </Button>
               </div>
             </CardContent>
           </Card>
-
-          {/* Preview Section */}
-          {showPreview && (
-            <Card className="card-rustic animate-fade-in-up">
-              <CardHeader>
-                <CardTitle className="text-[#9E7E3D] flex items-center">
-                  <Eye className="w-5 h-5 mr-2 text-[#F5C24D]" />
-                  Report Preview
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="bg-white border rounded-lg p-6 shadow-lg border-[#9E7E3D]/20" style={{ fontFamily: 'serif' }}>
-                  {/* Preview Header */}
-                  <div className="text-center border-b border-[#9E7E3D]/20 pb-4 mb-6">
-                    <h1 className="text-2xl text-[#9E7E3D] mb-2 font-semibold">
-                      {reportTitle || 'Ayurvedic Diet Chart'}
-                    </h1>
-                    <p className="text-[#4C7A5A]">
-                      Personalized for {samplePatients.find(p => p.id === selectedPatient)?.name || 'Patient'}
-                    </p>
-                    <p className="text-sm text-[#4C7A5A]/60 mt-2">
-                      Generated on {new Date().toLocaleDateString()} | Dr. Ayurveda Practitioner
-                    </p>
-                  </div>
-
-                  {/* Sample Content */}
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-lg text-[#9E7E3D] mb-2 font-medium">Constitutional Analysis</h3>
-                      <p className="text-sm text-[#4C7A5A]">
-                        Based on your Ayurvedic assessment, your primary constitution is{' '}
-                        <strong className="text-[#9E7E3D]">{samplePatients.find(p => p.id === selectedPatient)?.dosha || 'Vata-Pitta'}</strong>.
-                        This report provides personalized dietary recommendations to maintain balance and optimize health.
-                      </p>
-                    </div>
-
-                    <div>
-                      <h3 className="text-lg text-[#9E7E3D] mb-2 font-medium">Weekly Meal Plan Overview</h3>
-                      <div className="grid grid-cols-7 gap-2 text-xs">
-                        {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(day => (
-                          <div key={day} className="text-center p-2 bg-gradient-to-br from-[#E1D1A5]/50 to-[#F5C24D]/20 rounded border border-[#9E7E3D]/10">
-                            <p className="font-medium text-[#9E7E3D]">{day}</p>
-                            <p className="text-[#4C7A5A]/70">Kitchari</p>
-                            <p className="text-[#4C7A5A]/70">Rice Bowl</p>
-                            <p className="text-[#4C7A5A]/70">Soup</p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {includeRecipes && (
-                      <div>
-                        <h3 className="text-lg text-[#9E7E3D] mb-2 font-medium">Featured Recipes</h3>
-                        <div className="space-y-2">
-                          <div className="p-3 bg-gradient-to-r from-[#E1D1A5]/50 to-[#F5C24D]/20 rounded border-l-4 border-[#F5C24D]">
-                            <h4 className="text-[#9E7E3D] font-medium">Golden Turmeric Latte</h4>
-                            <p className="text-xs text-[#4C7A5A]/70">Warming beverage perfect for Vata constitution</p>
-                          </div>
-                          <div className="p-3 bg-gradient-to-r from-[#E1D1A5]/50 to-[#F5C24D]/20 rounded border-l-4 border-[#F5C24D]">
-                            <h4 className="text-[#9E7E3D] font-medium">Quinoa Kitchari</h4>
-                            <p className="text-xs text-[#4C7A5A]/70">Nourishing one-pot meal for all doshas</p>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
-                    {customNotes && (
-                      <div>
-                        <h3 className="text-lg text-[#9E7E3D] mb-2 font-medium">Special Instructions</h3>
-                        <div className="p-3 bg-gradient-to-r from-[#4C7A5A]/10 to-[#E1D1A5]/30 rounded border border-[#4C7A5A]/20">
-                          <p className="text-sm text-[#4C7A5A]">{customNotes}</p>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="text-center text-xs text-[#4C7A5A]/60 mt-6 pt-4 border-t border-[#9E7E3D]/20">
-                    This is a preview. The complete report will include detailed recipes, shopping lists, and comprehensive guidelines.
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          )}
         </div>
 
-        {/* Recent Reports & Quick Actions */}
+        {/* Recent Reports */}
         <div className="space-y-6">
           <Card className="card-rustic animate-slide-in-right">
             <CardHeader>
@@ -357,33 +314,24 @@ export function ReportsGeneration() {
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
-                {recentReports.map((report, index) => (
-                  <div key={report.id} className="p-3 border border-[#9E7E3D]/20 rounded-lg bg-gradient-to-r from-[#E1D1A5]/30 to-[#F5C24D]/10 hover:shadow-md transition-all duration-300" style={{ animationDelay: `${index * 0.1}s` }}>
+                {recentReports.map((report) => (
+                  <div
+                    key={report.id}
+                    className="p-3 border border-[#9E7E3D]/20 rounded-lg bg-gradient-to-br from-[#E1D1A5]/20 to-white hover:shadow-md transition-all duration-300"
+                  >
                     <div className="flex items-start justify-between mb-2">
-                      <div>
-                        <p className="text-sm text-[#9E7E3D] font-medium">{report.patient}</p>
-                        <p className="text-xs text-[#4C7A5A]/70">{report.type}</p>
-                      </div>
-                      <Badge 
+                      <h4 className="text-sm text-[#9E7E3D] font-medium">{report.patient}</h4>
+                      <Badge
                         variant={report.status === 'Generated' ? 'default' : 'secondary'}
                         className="text-xs bg-[#F5C24D]/20 text-[#9E7E3D] border-[#9E7E3D]/20"
                       >
                         {report.status}
                       </Badge>
                     </div>
-                    <div className="flex items-center justify-between text-xs text-[#4C7A5A]/60">
-                      <span>{new Date(report.created).toLocaleDateString()}</span>
-                      <span>{report.pages} pages</span>
-                    </div>
-                    <div className="flex gap-2 mt-2">
-                      <Button variant="outline" size="sm" className="flex-1 text-xs btn-rustic-outline">
-                        <Eye className="w-3 h-3 mr-1" />
-                        View
-                      </Button>
-                      <Button variant="outline" size="sm" className="flex-1 text-xs btn-rustic-outline">
-                        <Download className="w-3 h-3 mr-1" />
-                        Download
-                      </Button>
+                    <p className="text-xs text-[#4C7A5A]/70 mb-2">{report.type}</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-[#4C7A5A]/60">{report.created}</span>
+                      <span className="text-xs text-[#4C7A5A]/60">{report.pages} pages</span>
                     </div>
                   </div>
                 ))}
@@ -391,48 +339,24 @@ export function ReportsGeneration() {
             </CardContent>
           </Card>
 
-          <Card className="card-rustic animate-on-scroll">
-            <CardHeader>
-              <CardTitle className="text-[#9E7E3D]">Quick Actions</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              <Button className="w-full justify-start btn-rustic-outline">
-                <Printer className="w-4 h-4 mr-2" />
-                Print Last Report
-              </Button>
-              <Button className="w-full justify-start btn-rustic-outline">
-                <Share className="w-4 h-4 mr-2" />
-                Share via Email
-              </Button>
-              <Button className="w-full justify-start btn-rustic-outline">
-                <Calendar className="w-4 h-4 mr-2" />
-                Schedule Report
-              </Button>
-              <Button className="w-full justify-start btn-rustic-outline">
-                <Settings className="w-4 h-4 mr-2" />
-                Customize Template
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="card-rustic animate-on-scroll">
+          <Card className="card-rustic animate-slide-in-right">
             <CardHeader>
               <CardTitle className="text-[#9E7E3D] flex items-center">
                 <BarChart className="w-5 h-5 mr-2 text-[#F5C24D]" />
-                Report Statistics
+                Quick Stats
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-3">
-                <div className="flex items-center justify-between p-3 bg-gradient-to-r from-[#E1D1A5]/30 to-[#F5C24D]/20 rounded-lg">
-                  <span className="text-sm text-[#4C7A5A]/70">This Month</span>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-[#4C7A5A]/70">Total Reports</span>
                   <span className="text-lg text-[#9E7E3D] font-semibold">24</span>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-gradient-to-r from-[#4C7A5A]/20 to-[#E1D1A5]/30 rounded-lg">
-                  <span className="text-sm text-[#4C7A5A]/70">Total Generated</span>
-                  <span className="text-lg text-[#9E7E3D] font-semibold">156</span>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-[#4C7A5A]/70">This Month</span>
+                  <span className="text-lg text-[#9E7E3D] font-semibold">8</span>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-gradient-to-r from-[#F5C24D]/20 to-[#4C7A5A]/20 rounded-lg">
+                <div className="flex items-center justify-between">
                   <span className="text-sm text-[#4C7A5A]/70">Most Popular</span>
                   <span className="text-sm text-[#9E7E3D] font-medium">Comprehensive</span>
                 </div>

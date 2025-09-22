@@ -14,7 +14,8 @@ import {
   User
 } from 'lucide-react';
 import { useAuth } from './AuthProvider';
-import ayurvedaIcon from '../assets/topbar-ui.jpg';
+import BackendStatus from './BackendStatus';
+// import ayurvedaIcon from '../assets/topbar-ui.jpg';
 
 interface MenuItem {
   id: string;
@@ -43,11 +44,9 @@ export function Topbar({ menuItems, activeSection, onSectionChange, user }: Topb
             <div className="flex items-center space-x-4 animate-fade-in-up">
               <div className="relative group">
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-xl border border-[#C9C24D]/30 flex items-center justify-center neo-morphism animate-rotate3d transform transition-all duration-500 hover:scale-110">
-                  <img 
-                    src={ayurvedaIcon} 
-                    alt="AyurSync Ayurveda" 
-                    className="w-8 h-8 object-contain drop-shadow-lg"
-                  />
+                  <div className="w-8 h-8 bg-gradient-to-br from-[#C9C24D] to-[#CA912E] rounded-full flex items-center justify-center">
+                    <span className="text-[#61803F] font-bold text-lg">A</span>
+                  </div>
                 </div>
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#C9C24D]/20 to-[#CA912E]/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-glow-pulse"></div>
               </div>
@@ -97,6 +96,9 @@ export function Topbar({ menuItems, activeSection, onSectionChange, user }: Topb
 
             {/* User Section & Mobile Menu Button */}
             <div className="flex items-center space-x-4">
+              {/* Backend Status */}
+              <BackendStatus className="hidden sm:flex" />
+              
               {user && (
                 <div className="hidden sm:flex items-center space-x-3">
                   <div className="text-right">

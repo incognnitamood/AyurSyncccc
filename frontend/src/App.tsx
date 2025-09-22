@@ -7,6 +7,7 @@ import { ReportsGeneration } from './components/ReportsGeneration';
 import { Topbar } from './components/topbar';
 import { LoginForm } from './components/LoginForm';
 import { AuthProvider, useAuth } from './components/AuthProvider';
+import { PatientProvider } from './contexts/PatientContext';
 import { 
   LayoutDashboard, 
   Users, 
@@ -108,7 +109,9 @@ const AppContent: React.FC = () => {
 export default function App() {
   return (
     <AuthProvider>
-      <AppContent />
+      <PatientProvider>
+        <AppContent />
+      </PatientProvider>
     </AuthProvider>
   );
 }

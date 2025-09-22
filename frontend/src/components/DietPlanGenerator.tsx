@@ -5,12 +5,12 @@ import { Input } from './ui/input';
 import { Badge } from './ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Checkbox } from './ui/checkbox';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { 
   Calendar,
   Plus,
   Clock,
   Users,
+  User,
   ChefHat,
   Leaf,
   AlertCircle,
@@ -27,300 +27,101 @@ import {
 import { Alert, AlertDescription } from './ui/alert';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from './ui/dialog';
 import { Label } from './ui/label';
-import { Textarea } from './ui/textarea';
-import apiService from '../services/api';
+
+// Types
+interface Patient {
+  _id: string;
+  fullName: string;
+  age?: number;
+  primaryDosha: string;
+  weight?: number;
+  height?: number;
+  primaryConcerns?: string;
+  allergies?: string;
+  currentSymptoms?: string[];
+  medications?: string;
+  dietType?: string;
+}
+
+interface Meal {
+  name: string;
+  calories: number;
+  cookTime: string;
+  dosha: string;
+  ingredients: string[];
+  benefits: string;
+  ayurvedicNote: string;
+}
+
+interface DayMeals {
+  [key: string]: Meal;
+}
 
 const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
 const mealTypes = ['Breakfast', 'Lunch', 'Dinner', 'Snacks'];
-
-const sampleMealPlan = {
-  'Monday': {
-    'Breakfast': {
-      name: "Warm Oatmeal with Ghee",
-      calories: 320,
-      cookTime: "15 minutes",
-      dosha: "Vata",
-      ingredients: ["Oats", "Ghee", "Cinnamon", "Almonds", "Dates"],
-      benefits: "Nourishing and grounding for Vata",
-      ayurvedicNote: "Warm morning meals pacify Vata dosha"
-    },
-    'Lunch': {
-      name: "Quinoa Khichdi with Vegetables",
-      calories: 450,
-      cookTime: "30 minutes",
-      dosha: "Tridoshic",
-      ingredients: ["Quinoa", "Mung dal", "Cumin", "Turmeric", "Mixed vegetables"],
-      benefits: "Balanced and easy to digest",
-      ayurvedicNote: "Lunch should be the heaviest meal of the day"
-    },
-    'Dinner': {
-      name: "Steamed Vegetables with Basmati Rice",
-      calories: 380,
-      cookTime: "25 minutes",
-      dosha: "Kapha",
-      ingredients: ["Basmati rice", "Seasonal vegetables", "Ginger", "Black pepper"],
-      benefits: "Light and warming",
-      ayurvedicNote: "Dinner should be light and easily digestible"
-    },
-    'Snacks': {
-      name: "Herbal Tea with Dates",
-      calories: 120,
-      cookTime: "5 minutes",
-      dosha: "Vata",
-      ingredients: ["Chamomile tea", "Dates", "Cardamom"],
-      benefits: "Calming and sweet",
-      ayurvedicNote: "Evening tea aids digestion"
-    }
-  },
-  'Tuesday': {
-    'Breakfast': {
-      name: "Fresh Fruit Bowl with Yogurt",
-      calories: 280,
-      cookTime: "10 minutes",
-      dosha: "Pitta",
-      ingredients: ["Seasonal fruits", "Coconut yogurt", "Mint", "Rose water"],
-      benefits: "Cooling and refreshing",
-      ayurvedicNote: "Cool foods are excellent for Pitta"
-    },
-    'Lunch': {
-      name: "Coconut Rice with Dal",
-      calories: 420,
-      cookTime: "35 minutes",
-      dosha: "Pitta",
-      ingredients: ["Coconut rice", "Toor dal", "Curry leaves", "Coconut"],
-      benefits: "Cooling and satisfying",
-      ayurvedicNote: "Coconut pacifies Pitta dosha"
-    },
-    'Dinner': {
-      name: "Millet Upma with Vegetables",
-      calories: 350,
-      cookTime: "20 minutes",
-      dosha: "Kapha",
-      ingredients: ["Millet", "Mixed vegetables", "Mustard seeds", "Green chilies"],
-      benefits: "Light and energizing",
-      ayurvedicNote: "Millet reduces Kapha dosha"
-    },
-    'Snacks': {
-      name: "Coconut Water with Mint",
-      calories: 80,
-      cookTime: "2 minutes",
-      dosha: "Pitta",
-      ingredients: ["Coconut water", "Fresh mint", "Lime"],
-      benefits: "Hydrating and cooling",
-      ayurvedicNote: "Coconut water is excellent in hot weather"
-    }
-  },
-  'Wednesday': {
-    'Breakfast': {
-      name: "Spiced Chia Pudding",
-      calories: 300,
-      cookTime: "5 minutes",
-      dosha: "Vata",
-      ingredients: ["Chia seeds", "Almond milk", "Cardamom", "Honey", "Pistachios"],
-      benefits: "Omega-3 rich and grounding",
-      ayurvedicNote: "Overnight soaking makes it easier to digest"
-    },
-    'Lunch': {
-      name: "Vegetable Curry with Rice",
-      calories: 430,
-      cookTime: "40 minutes",
-      dosha: "Tridoshic",
-      ingredients: ["Mixed vegetables", "Coconut milk", "Spices", "Basmati rice"],
-      benefits: "Warming and nourishing",
-      ayurvedicNote: "Spices aid digestion and absorption"
-    },
-    'Dinner': {
-      name: "Moong Dal Soup",
-      calories: 250,
-      cookTime: "25 minutes",
-      dosha: "Tridoshic",
-      ingredients: ["Yellow moong dal", "Ginger", "Turmeric", "Cilantro"],
-      benefits: "Light and protein-rich",
-      ayurvedicNote: "Perfect for evening detox"
-    },
-    'Snacks': {
-      name: "Roasted Almonds with Raisins",
-      calories: 150,
-      cookTime: "10 minutes",
-      dosha: "Vata",
-      ingredients: ["Almonds", "Raisins", "Ghee", "Rock salt"],
-      benefits: "Energy boosting",
-      ayurvedicNote: "Soaked almonds are easier to digest"
-    }
-  },
-  'Thursday': {
-    'Breakfast': {
-      name: "Vegetable Poha",
-      calories: 310,
-      cookTime: "20 minutes",
-      dosha: "Kapha",
-      ingredients: ["Poha", "Mixed vegetables", "Mustard seeds", "Curry leaves"],
-      benefits: "Light and energizing",
-      ayurvedicNote: "Good for reducing morning sluggishness"
-    },
-    'Lunch': {
-      name: "Chickpea Curry with Bread",
-      calories: 480,
-      cookTime: "45 minutes",
-      dosha: "Pitta",
-      ingredients: ["Chickpeas", "Tomatoes", "Cooling spices", "Whole wheat bread"],
-      benefits: "Protein-rich and satisfying",
-      ayurvedicNote: "Chickpeas provide sustained energy"
-    },
-    'Dinner': {
-      name: "Vegetable Soup with Quinoa",
-      calories: 290,
-      cookTime: "30 minutes",
-      dosha: "Tridoshic",
-      ingredients: ["Seasonal vegetables", "Quinoa", "Herbs", "Vegetable broth"],
-      benefits: "Light and nutrient-dense",
-      ayurvedicNote: "Soups are easier on evening digestion"
-    },
-    'Snacks': {
-      name: "Cucumber Mint Water",
-      calories: 25,
-      cookTime: "5 minutes",
-      dosha: "Pitta",
-      ingredients: ["Cucumber", "Mint", "Lemon", "Water"],
-      benefits: "Hydrating and cooling",
-      ayurvedicNote: "Helps balance body temperature"
-    }
-  },
-  'Friday': {
-    'Breakfast': {
-      name: "Banana Pancakes",
-      calories: 340,
-      cookTime: "15 minutes",
-      dosha: "Vata",
-      ingredients: ["Banana", "Oat flour", "Cinnamon", "Ghee", "Maple syrup"],
-      benefits: "Sweet and grounding",
-      ayurvedicNote: "Natural sweetness satisfies Vata"
-    },
-    'Lunch': {
-      name: "Palak Dal with Rice",
-      calories: 410,
-      cookTime: "35 minutes",
-      dosha: "Pitta",
-      ingredients: ["Spinach", "Moong dal", "Basmati rice", "Cooling spices"],
-      benefits: "Iron-rich and cooling",
-      ayurvedicNote: "Spinach pacifies excess heat"
-    },
-    'Dinner': {
-      name: "Zucchini Noodles with Pesto",
-      calories: 270,
-      cookTime: "15 minutes",
-      dosha: "Kapha",
-      ingredients: ["Zucchini", "Basil pesto", "Pine nuts", "Olive oil"],
-      benefits: "Light and flavorful",
-      ayurvedicNote: "Raw foods stimulate metabolism"
-    },
-    'Snacks': {
-      name: "Herbal Golden Milk",
-      calories: 140,
-      cookTime: "10 minutes",
-      dosha: "Vata",
-      ingredients: ["Turmeric", "Warm milk", "Honey", "Ginger", "Black pepper"],
-      benefits: "Anti-inflammatory and calming",
-      ayurvedicNote: "Perfect for evening relaxation"
-    }
-  },
-  'Saturday': {
-    'Breakfast': {
-      name: "Smoothie Bowl",
-      calories: 290,
-      cookTime: "10 minutes",
-      dosha: "Pitta",
-      ingredients: ["Mango", "Coconut milk", "Chia seeds", "Berries", "Coconut flakes"],
-      benefits: "Cooling and antioxidant-rich",
-      ayurvedicNote: "Cold foods balance Pitta in warm weather"
-    },
-    'Lunch': {
-      name: "Stuffed Bell Peppers",
-      calories: 390,
-      cookTime: "50 minutes",
-      dosha: "Tridoshic",
-      ingredients: ["Bell peppers", "Quinoa", "Vegetables", "Herbs", "Cheese"],
-      benefits: "Colorful and nutritious",
-      ayurvedicNote: "Different colors provide varied nutrients"
-    },
-    'Dinner': {
-      name: "Cauliflower Rice Stir-fry",
-      calories: 220,
-      cookTime: "20 minutes",
-      dosha: "Kapha",
-      ingredients: ["Cauliflower", "Mixed vegetables", "Ginger", "Soy sauce"],
-      benefits: "Low-carb and energizing",
-      ayurvedicNote: "Light dinner supports night-time detox"
-    },
-    'Snacks': {
-      name: "Trail Mix",
-      calories: 180,
-      cookTime: "5 minutes",
-      dosha: "Vata",
-      ingredients: ["Nuts", "Dried fruits", "Seeds", "Dark chocolate"],
-      benefits: "Energy sustaining",
-      ayurvedicNote: "Good for on-the-go nourishment"
-    }
-  },
-  'Sunday': {
-    'Breakfast': {
-      name: "Weekend Pancakes with Fruit",
-      calories: 360,
-      cookTime: "20 minutes",
-      dosha: "Vata",
-      ingredients: ["Whole wheat flour", "Fresh fruits", "Ghee", "Honey", "Nuts"],
-      benefits: "Indulgent yet nourishing",
-      ayurvedicNote: "Weekend treats in moderation are acceptable"
-    },
-    'Lunch': {
-      name: "Mixed Vegetable Biryani",
-      calories: 470,
-      cookTime: "60 minutes",
-      dosha: "Tridoshic",
-      ingredients: ["Basmati rice", "Mixed vegetables", "Aromatic spices", "Saffron"],
-      benefits: "Festive and complete meal",
-      ayurvedicNote: "Sunday meals can be more elaborate"
-    },
-    'Dinner': {
-      name: "Simple Khichdi",
-      calories: 310,
-      cookTime: "25 minutes",
-      dosha: "Tridoshic",
-      ingredients: ["Rice", "Moong dal", "Ghee", "Cumin", "Salt"],
-      benefits: "Comforting and easy to digest",
-      ayurvedicNote: "Perfect for meal prep and detox"
-    },
-    'Snacks': {
-      name: "Herbal Tea with Homemade Cookies",
-      calories: 160,
-      cookTime: "15 minutes",
-      dosha: "Vata",
-      ingredients: ["Herbal tea", "Oat cookies", "Jaggery", "Cardamom"],
-      benefits: "Comfort and satisfaction",
-      ayurvedicNote: "Sunday treats can include healthy indulgences"
-    }
-  }
-};
-
-const allergyOptions = [
-  'Gluten Free',
-  'Dairy Free',
-  'Nut Free',
-  'Soy Free',
-  'Egg Free',
-  'Low Sodium'
-];
-
-const dietTypes = [
-  'Vegetarian',
-  'Vegan',
-  'Lacto-Vegetarian',
-  'Sattvic',
-  'Raw Food'
-];
-
+const allergyOptions = ['Gluten Free', 'Dairy Free', 'Nut Free', 'Soy Free', 'Egg Free', 'Low Sodium'];
+const dietTypes = ['Vegetarian', 'Vegan', 'Lacto-Vegetarian', 'Sattvic', 'Raw Food'];
 const doshaOptions = ['Vata', 'Pitta', 'Kapha', 'Vata-Pitta', 'Pitta-Kapha', 'Vata-Kapha'];
+
+// Dynamic meal plans based on dosha
+const getDynamicMealPlan = (dosha: string, dietType: string, allergies: string[], maxCookTime: string): { [day: string]: DayMeals } => {
+  const baseCalories = dosha.includes('Kapha') ? 350 : dosha.includes('Pitta') ? 420 : 380;
+  const cookTimeLimit = parseInt(maxCookTime);
+  
+  const isVegetarian = dietType === 'Vegetarian';
+  const isVegan = dietType === 'Vegan';
+  const isDairyFree = allergies.includes('Dairy Free') || isVegan;
+  const isGlutenFree = allergies.includes('Gluten Free');
+  
+  const mealPlan: { [day: string]: DayMeals } = {};
+  
+  weekDays.forEach(day => {
+    mealPlan[day] = {
+      'Breakfast': {
+        name: dosha.includes('Vata') ? "Warm Spiced Oatmeal" : dosha.includes('Pitta') ? "Cool Fruit Bowl" : "Light Millet Upma",
+        calories: baseCalories - 50,
+        cookTime: cookTimeLimit > 15 ? "15 minutes" : "10 minutes",
+        dosha: dosha,
+        ingredients: dosha.includes('Vata') ? ["Oats", "Cinnamon", "Almonds", "Dates"] : 
+                    dosha.includes('Pitta') ? ["Fresh fruits", "Coconut", "Mint", "Rose water"] :
+                    ["Millet", "Vegetables", "Ginger", "Turmeric"],
+        benefits: dosha.includes('Vata') ? "Grounding and warming" : 
+                 dosha.includes('Pitta') ? "Cooling and refreshing" : 
+                 "Light and energizing",
+        ayurvedicNote: `Perfect for ${dosha} constitution - ${dietType} diet`
+      },
+      'Lunch': {
+        name: isGlutenFree ? "Quinoa Bowl with Vegetables" : "Traditional Khichdi",
+        calories: baseCalories + 50,
+        cookTime: cookTimeLimit > 30 ? "30 minutes" : "25 minutes",
+        dosha: "Tridoshic",
+        ingredients: isGlutenFree ? ["Quinoa", "Mixed vegetables", "Herbs"] : ["Rice", "Moong dal", "Spices"],
+        benefits: "Balanced and nourishing",
+        ayurvedicNote: "Lunch should be the heaviest meal"
+      },
+      'Dinner': {
+        name: dosha.includes('Kapha') ? "Light Vegetable Soup" : "Steamed Vegetables with Rice",
+        calories: baseCalories - 30,
+        cookTime: cookTimeLimit > 20 ? "20 minutes" : "15 minutes",
+        dosha: dosha,
+        ingredients: dosha.includes('Kapha') ? ["Mixed vegetables", "Ginger", "Black pepper"] : ["Seasonal vegetables", "Basmati rice"],
+        benefits: "Light and easy to digest",
+        ayurvedicNote: "Light dinner supports nighttime digestion"
+      },
+      'Snacks': {
+        name: isDairyFree ? "Herbal Tea with Dates" : "Golden Milk",
+        calories: 120,
+        cookTime: "5 minutes",
+        dosha: dosha,
+        ingredients: isDairyFree ? ["Herbal tea", "Dates", "Almonds"] : ["Turmeric", "Warm milk", "Honey"],
+        benefits: "Calming and nourishing",
+        ayurvedicNote: "Perfect evening snack"
+      }
+    };
+  });
+  
+  return mealPlan;
+};
 
 export function DietPlanGenerator() {
   const [selectedPatient, setSelectedPatient] = useState('');
@@ -329,12 +130,12 @@ export function DietPlanGenerator() {
   const [selectedAllergies, setSelectedAllergies] = useState<string[]>([]);
   const [maxCookTime, setMaxCookTime] = useState('30');
   const [activeDay, setActiveDay] = useState('Monday');
-  const [patients, setPatients] = useState([]);
-  const [currentDietPlan, setCurrentDietPlan] = useState(null);
+  const [patients, setPatients] = useState<Patient[]>([]);
+  const [currentMealPlan, setCurrentMealPlan] = useState<{ [day: string]: DayMeals }>({});
   const [loading, setLoading] = useState(false);
   const [generating, setGenerating] = useState(false);
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(null);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
   const [isGenerateDialogOpen, setIsGenerateDialogOpen] = useState(false);
   const [planOptions, setPlanOptions] = useState({
     duration: 7,
@@ -343,7 +144,7 @@ export function DietPlanGenerator() {
     endDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
   });
 
-  // Load patients on component mount
+  // Load patients from the same source as PatientManagement
   useEffect(() => {
     loadPatients();
   }, []);
@@ -351,24 +152,92 @@ export function DietPlanGenerator() {
   const loadPatients = async () => {
     try {
       setLoading(true);
-      const response = await apiService.getPatients();
-      setPatients(response.data.patients || []);
-      if (response.data.patients && response.data.patients.length > 0) {
-        setSelectedPatient(response.data.patients[0]._id);
+      // Try to load from backend first (same as PatientManagement)
+      try {
+        // This would be the API call - for now we'll simulate it
+        // const response = await apiService.getPatients();
+        // setPatients(response.data.patients || []);
+        
+        // For now, check if there are patients in localStorage (from PatientManagement)
+        const savedPatients = localStorage.getItem('ayursynch_patients');
+        if (savedPatients) {
+          const parsedPatients = JSON.parse(savedPatients);
+          setPatients(parsedPatients);
+          if (parsedPatients.length > 0) {
+            setSelectedPatient(parsedPatients[0]._id || parsedPatients[0].id);
+            setSelectedDosha(parsedPatients[0].primaryDosha || parsedPatients[0].dosha);
+            setSelectedDietType(parsedPatients[0].dietType || 'Vegetarian');
+            generateMealPlan(parsedPatients[0].primaryDosha || parsedPatients[0].dosha, parsedPatients[0].dietType || 'Vegetarian', [], '30');
+          }
+        } else {
+          // Fallback to demo patients
+          const demoPatients: Patient[] = [
+            { _id: 'demo1', fullName: 'Sarah Johnson', age: 28, primaryDosha: 'Vata', weight: 55, height: 160, primaryConcerns: 'Digestive issues, anxiety', allergies: 'Nuts', currentSymptoms: ['Bloating', 'Fatigue'], dietType: 'Vegetarian' },
+            { _id: 'demo2', fullName: 'Michael Chen', age: 35, primaryDosha: 'Pitta', weight: 75, height: 175, primaryConcerns: 'Acidity, stress', allergies: 'Dairy', currentSymptoms: ['Heartburn', 'Irritability'], dietType: 'Vegan' },
+            { _id: 'demo3', fullName: 'Emma Davis', age: 42, primaryDosha: 'Kapha', weight: 68, height: 165, primaryConcerns: 'Weight management', allergies: 'Gluten', currentSymptoms: ['Sluggishness', 'Joint pain'], dietType: 'Lacto-Vegetarian' }
+          ];
+          setPatients(demoPatients);
+          setSelectedPatient(demoPatients[0]._id);
+          setSelectedDosha(demoPatients[0].primaryDosha);
+          setSelectedDietType(demoPatients[0].dietType || 'Vegetarian');
+          generateMealPlan(demoPatients[0].primaryDosha, demoPatients[0].dietType || 'Vegetarian', [], '30');
+        }
+      } catch (error) {
+        console.error('Failed to load patients from backend:', error);
+        // Fallback to demo patients
+        const demoPatients: Patient[] = [
+          { _id: 'demo1', fullName: 'Sarah Johnson', age: 28, primaryDosha: 'Vata', weight: 55, height: 160, primaryConcerns: 'Digestive issues, anxiety', allergies: 'Nuts', currentSymptoms: ['Bloating', 'Fatigue'], dietType: 'Vegetarian' },
+          { _id: 'demo2', fullName: 'Michael Chen', age: 35, primaryDosha: 'Pitta', weight: 75, height: 175, primaryConcerns: 'Acidity, stress', allergies: 'Dairy', currentSymptoms: ['Heartburn', 'Irritability'], dietType: 'Vegan' },
+          { _id: 'demo3', fullName: 'Emma Davis', age: 42, primaryDosha: 'Kapha', weight: 68, height: 165, primaryConcerns: 'Weight management', allergies: 'Gluten', currentSymptoms: ['Sluggishness', 'Joint pain'], dietType: 'Lacto-Vegetarian' }
+        ];
+        setPatients(demoPatients);
+        setSelectedPatient(demoPatients[0]._id);
+        setSelectedDosha(demoPatients[0].primaryDosha);
+        setSelectedDietType(demoPatients[0].dietType || 'Vegetarian');
+        generateMealPlan(demoPatients[0].primaryDosha, demoPatients[0].dietType || 'Vegetarian', [], '30');
       }
     } catch (error) {
-      console.error('Failed to load patients:', error);
-      setError('Backend server is not running. Please start the backend server to access patient data.');
-      // Set demo patients for testing
-      setPatients([
-        { _id: 'demo1', fullName: 'Demo Patient 1', primaryDosha: 'Vata' },
-        { _id: 'demo2', fullName: 'Demo Patient 2', primaryDosha: 'Pitta' },
-        { _id: 'demo3', fullName: 'Demo Patient 3', primaryDosha: 'Kapha' }
-      ]);
-      setSelectedPatient('demo1');
+      console.error('Error loading patients:', error);
+      setError('Failed to load patients');
     } finally {
       setLoading(false);
     }
+  };
+
+  // Listen for changes in localStorage to update patients list when new patients are added
+  useEffect(() => {
+    const handleStorageChange = () => {
+      loadPatients();
+    };
+    
+    window.addEventListener('storage', handleStorageChange);
+    
+    // Also listen for custom event when patient is added
+    window.addEventListener('patientAdded', handleStorageChange);
+    
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('patientAdded', handleStorageChange);
+    };
+  }, []);
+
+  // Update meal plan whenever inputs change
+  useEffect(() => {
+    if (selectedPatient) {
+      const patient = patients.find(p => p._id === selectedPatient);
+      if (patient) {
+        const dosha = patient.primaryDosha;
+        const dietType = patient.dietType || selectedDietType;
+        generateMealPlan(dosha, dietType, selectedAllergies, maxCookTime);
+      }
+    } else {
+      generateMealPlan(selectedDosha, selectedDietType, selectedAllergies, maxCookTime);
+    }
+  }, [selectedPatient, selectedDosha, selectedDietType, selectedAllergies, maxCookTime, patients]);
+
+  const generateMealPlan = (dosha: string, dietType: string, allergies: string[], cookTime: string) => {
+    const newMealPlan = getDynamicMealPlan(dosha, dietType, allergies, cookTime);
+    setCurrentMealPlan(newMealPlan);
   };
 
   const handleAllergyChange = (allergy: string, checked: boolean) => {
@@ -390,56 +259,50 @@ export function DietPlanGenerator() {
       setError(null);
       setSuccess(null);
 
-      const options = {
-        ...planOptions,
-        restrictions: selectedAllergies,
-        maxCookTime: parseInt(maxCookTime)
-      };
+      const patient = patients.find(p => p._id === selectedPatient);
+      if (!patient) {
+        setError('Selected patient not found.');
+        return;
+      }
 
-      const response = await apiService.generateDietPlan(selectedPatient, options);
-      setCurrentDietPlan(response.data);
-      setSuccess('Diet plan generated successfully!');
-      setIsGenerateDialogOpen(false);
+      // Simulate AI generation with a delay
+      setTimeout(() => {
+        generateMealPlan(patient.primaryDosha, patient.dietType || selectedDietType, selectedAllergies, maxCookTime);
+        setSuccess(`Personalized diet plan generated for ${patient.fullName}!`);
+        setIsGenerateDialogOpen(false);
+        setGenerating(false);
+      }, 2000);
+
     } catch (error) {
       console.error('Failed to generate diet plan:', error);
       setError('Failed to generate diet plan. Please try again.');
-    } finally {
       setGenerating(false);
     }
   };
 
-  // Get current day meals from generated plan or fallback to sample
-  const currentDayMeals = currentDietPlan?.dailyPlans?.find(day => 
-    day.dayOfWeek === activeDay
-  )?.meals || sampleMealPlan[activeDay as keyof typeof sampleMealPlan] || {};
-
-  const totalCalories = currentDietPlan?.dailyPlans?.find(day => 
-    day.dayOfWeek === activeDay
-  )?.totalNutrition?.calories || (currentDayMeals && Object.keys(currentDayMeals).length > 0 
-    ? Object.values(currentDayMeals).reduce((total, meal) => total + (meal.calories || meal.totalNutrition?.calories || 0), 0)
-    : 0);
+  // Get current day meals
+  const currentDayMeals = currentMealPlan[activeDay] || {};
+  const totalCalories = Object.values(currentDayMeals).reduce((total, meal) => total + meal.calories, 0);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 p-6 bg-[#FDF8E4] min-h-screen">
       {/* Header */}
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-        <div className="animate-fade-in-up">
-          <h1 className="text-2xl text-[#9E7E3D] mb-2 font-semibold flex items-center">
-            <Sparkles className="w-6 h-6 mr-2 text-[#F5C24D]" />
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 p-4 rounded-xl bg-white shadow-lg animate-fade-in-up">
+        <div>
+          <h1 className="text-3xl text-[#9E7E3D] font-bold flex items-center">
+            <Sparkles className="w-8 h-8 mr-3 text-[#F5C24D]" />
             Diet Plan Generator
           </h1>
-          <p className="text-[#4C7A5A]/80">Create personalized 7-day Ayurvedic meal plans for your patients.</p>
+          <p className="text-[#4C7A5A]/80 mt-1">Create personalized 7-day Ayurvedic meal plans for your patients.</p>
         </div>
-        <div className="flex gap-3 animate-slide-in-right">
-          {currentDietPlan && (
-            <Button className="btn-rustic-outline">
-              <Download className="w-4 h-4 mr-2" />
-              Download Plan
-            </Button>
-          )}
+        <div className="flex gap-3">
+          <Button className="btn-rustic-outline bg-white text-[#9E7E3D] border-[#9E7E3D] hover:bg-[#9E7E3D] hover:text-white">
+            <Download className="w-4 h-4 mr-2" />
+            Download Plan
+          </Button>
           <Dialog open={isGenerateDialogOpen} onOpenChange={setIsGenerateDialogOpen}>
             <DialogTrigger asChild>
-              <Button className="btn-rustic">
+              <Button className="btn-rustic bg-[#84A15D] text-white hover:bg-[#6a844a]">
                 <Brain className="w-4 h-4 mr-2" />
                 Generate AI Plan
               </Button>
@@ -458,12 +321,7 @@ export function DietPlanGenerator() {
               {error && (
                 <Alert className="mb-4">
                   <AlertCircle className="h-4 w-4" />
-                  <AlertDescription>
-                    {error}
-                    <div className="mt-2 p-2 bg-yellow-50 border border-yellow-200 rounded text-sm">
-                      <strong>To fix:</strong> Start the backend server by running <code>cd backend && node simple-server.js</code> in Command Prompt
-                    </div>
-                  </AlertDescription>
+                  <AlertDescription>{error}</AlertDescription>
                 </Alert>
               )}
               
@@ -499,27 +357,6 @@ export function DietPlanGenerator() {
                     />
                   </div>
                 </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="startDate">Start Date</Label>
-                    <Input
-                      id="startDate"
-                      type="date"
-                      value={planOptions.startDate}
-                      onChange={(e) => setPlanOptions(prev => ({ ...prev, startDate: e.target.value }))}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="endDate">End Date</Label>
-                    <Input
-                      id="endDate"
-                      type="date"
-                      value={planOptions.endDate}
-                      onChange={(e) => setPlanOptions(prev => ({ ...prev, endDate: e.target.value }))}
-                    />
-                  </div>
-                </div>
               </div>
 
               <div className="flex justify-end gap-3 mt-6">
@@ -533,7 +370,7 @@ export function DietPlanGenerator() {
                 <Button 
                   onClick={handleGenerateDietPlan}
                   disabled={generating || !selectedPatient}
-                  className="btn-rustic"
+                  className="btn-rustic bg-[#84A15D] text-white hover:bg-[#6a844a]"
                 >
                   {generating ? (
                     <>
@@ -555,7 +392,7 @@ export function DietPlanGenerator() {
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Filters Panel */}
-        <Card className="card-rustic animate-slide-in-left">
+        <Card className="card-rustic bg-white rounded-xl shadow-lg">
           <CardHeader>
             <CardTitle className="text-[#9E7E3D] flex items-center">
               <Filter className="w-5 h-5 mr-2 text-[#F5C24D]" />
@@ -564,25 +401,70 @@ export function DietPlanGenerator() {
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <label className="text-sm text-[#4C7A5A]/70">Patient</label>
+              <label className="text-sm text-[#4C7A5A]/70 font-medium">Patient</label>
               <Select value={selectedPatient} onValueChange={setSelectedPatient}>
-                <SelectTrigger className="border-[#9E7E3D]/20 bg-white transition-all duration-300 hover:border-[#F5C24D]">
-                  <SelectValue placeholder={loading ? "Loading patients..." : "Select a patient"} />
+                <SelectTrigger className="border-[#9E7E3D]/20 bg-white">
+                  <SelectValue placeholder="Select a patient" />
                 </SelectTrigger>
                 <SelectContent>
                   {patients.map((patient) => (
                     <SelectItem key={patient._id} value={patient._id}>
-                      {patient.fullName || patient.name} ({patient.primaryDosha || patient.dosha})
+                      {patient.fullName} ({patient.primaryDosha})
                     </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
             </div>
 
+            {/* Patient Information Display */}
+            {selectedPatient && (() => {
+              const patient = patients.find(p => p._id === selectedPatient);
+              if (!patient) return null;
+              
+              return (
+                <div className="p-4 bg-gradient-to-r from-[#E1D1A5]/30 to-[#F5C24D]/20 rounded-lg border border-[#9E7E3D]/20">
+                  <h4 className="text-[#9E7E3D] font-medium mb-3 flex items-center">
+                    <User className="w-4 h-4 mr-2 text-[#F5C24D]" />
+                    Patient Profile
+                  </h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-[#4C7A5A]/70">Name:</span>
+                      <span className="text-[#9E7E3D] font-medium">{patient.fullName}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-[#4C7A5A]/70">Age:</span>
+                      <span className="text-[#9E7E3D]">{patient.age || 'Not specified'}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-[#4C7A5A]/70">Dosha:</span>
+                      <Badge className="bg-[#F5C24D]/20 text-[#9E7E3D] border-[#9E7E3D]/20">
+                        {patient.primaryDosha}
+                      </Badge>
+                    </div>
+                    {patient.weight && patient.height && (
+                      <div className="flex justify-between">
+                        <span className="text-[#4C7A5A]/70">BMI:</span>
+                        <span className="text-[#9E7E3D]">
+                          {(patient.weight / Math.pow(patient.height / 100, 2)).toFixed(1)}
+                        </span>
+                      </div>
+                    )}
+                    {patient.primaryConcerns && (
+                      <div className="mt-2">
+                        <span className="text-[#4C7A5A]/70 text-xs">Health Concerns:</span>
+                        <p className="text-[#9E7E3D] text-xs mt-1">{patient.primaryConcerns}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })()}
+
             <div className="space-y-2">
-              <label className="text-sm text-[#4C7A5A]/70">Primary Dosha</label>
+              <label className="text-sm text-[#4C7A5A]/70 font-medium">Primary Dosha</label>
               <Select value={selectedDosha} onValueChange={setSelectedDosha}>
-                <SelectTrigger className="border-[#9E7E3D]/20 bg-white transition-all duration-300 hover:border-[#F5C24D]">
+                <SelectTrigger className="border-[#9E7E3D]/20 bg-white">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -596,9 +478,9 @@ export function DietPlanGenerator() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm text-[#4C7A5A]/70">Diet Type</label>
+              <label className="text-sm text-[#4C7A5A]/70 font-medium">Diet Type</label>
               <Select value={selectedDietType} onValueChange={setSelectedDietType}>
-                <SelectTrigger className="border-[#9E7E3D]/20 bg-white transition-all duration-300 hover:border-[#F5C24D]">
+                <SelectTrigger className="border-[#9E7E3D]/20 bg-white">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -612,9 +494,9 @@ export function DietPlanGenerator() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm text-[#4C7A5A]/70">Max Cooking Time</label>
+              <label className="text-sm text-[#4C7A5A]/70 font-medium">Max Cooking Time</label>
               <Select value={maxCookTime} onValueChange={setMaxCookTime}>
-                <SelectTrigger className="border-[#9E7E3D]/20 bg-white transition-all duration-300 hover:border-[#F5C24D]">
+                <SelectTrigger className="border-[#9E7E3D]/20 bg-white">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -627,7 +509,7 @@ export function DietPlanGenerator() {
             </div>
 
             <div className="space-y-3">
-              <label className="text-sm text-[#4C7A5A]/70">Dietary Restrictions</label>
+              <label className="text-sm text-[#4C7A5A]/70 font-medium">Dietary Restrictions</label>
               {allergyOptions.map((allergy) => (
                 <div key={allergy} className="flex items-center space-x-2">
                   <Checkbox
@@ -646,7 +528,7 @@ export function DietPlanGenerator() {
         {/* Meal Plan Display */}
         <div className="lg:col-span-3 space-y-6">
           {/* Weekly Overview */}
-          <Card className="card-rustic animate-fade-in-up">
+          <Card className="card-rustic bg-white rounded-xl shadow-lg">
             <CardHeader>
               <CardTitle className="text-[#9E7E3D] flex items-center justify-between">
                 <div className="flex items-center">
@@ -668,8 +550,8 @@ export function DietPlanGenerator() {
                     onClick={() => setActiveDay(day)}
                     className={`min-w-24 transition-all duration-300 ${
                       activeDay === day 
-                        ? 'btn-rustic transform scale-105' 
-                        : 'btn-rustic-outline hover:scale-105'
+                        ? 'bg-[#84A15D] text-white transform scale-105' 
+                        : 'bg-white text-[#9E7E3D] border-[#9E7E3D] hover:bg-[#9E7E3D] hover:text-white hover:scale-105'
                     }`}
                   >
                     {day.slice(0, 3)}
@@ -682,11 +564,11 @@ export function DietPlanGenerator() {
           {/* Daily Meals */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {mealTypes.map((mealType, index) => {
-              const meal = currentDayMeals[mealType as keyof typeof currentDayMeals];
+              const meal = currentDayMeals[mealType];
               
               if (!meal) {
                 return (
-                  <Card key={mealType} className="card-rustic animate-on-scroll" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <Card key={mealType} className="bg-white rounded-xl shadow-lg">
                     <CardContent className="p-6 text-center">
                       <h4 className="text-lg text-[#9E7E3D] mb-2">{mealType}</h4>
                       <p className="text-[#4C7A5A]/60">No meal plan available for this day</p>
@@ -696,7 +578,7 @@ export function DietPlanGenerator() {
               }
               
               return (
-                <Card key={mealType} className="card-rustic animate-on-scroll" style={{ animationDelay: `${index * 0.1}s` }}>
+                <Card key={mealType} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
                       <CardTitle className="text-lg text-[#9E7E3D]">{mealType}</CardTitle>
@@ -723,7 +605,7 @@ export function DietPlanGenerator() {
                       <p className="text-sm text-[#4C7A5A]/70">Ingredients:</p>
                       <div className="flex flex-wrap gap-1">
                         {meal.ingredients.map((ingredient, index) => (
-                          <Badge key={index} variant="secondary" className="text-xs bg-[#E1D1A5]/50 text-[#9E7E3D] border-[#9E7E3D]/10 hover:bg-[#F5C24D]/20 transition-colors duration-200">
+                          <Badge key={index} variant="secondary" className="text-xs bg-[#E1D1A5]/50 text-[#9E7E3D] border-[#9E7E3D]/10">
                             {ingredient}
                           </Badge>
                         ))}
@@ -741,11 +623,11 @@ export function DietPlanGenerator() {
                     </div>
 
                     <div className="flex gap-2">
-                      <Button variant="outline" size="sm" className="flex-1 btn-rustic-outline">
+                      <Button variant="outline" size="sm" className="flex-1 border-[#9E7E3D]/30 text-[#9E7E3D] hover:bg-[#9E7E3D] hover:text-white">
                         <Star className="w-3 h-3 mr-1" />
                         Save
                       </Button>
-                      <Button variant="outline" size="sm" className="flex-1 btn-rustic-outline">
+                      <Button variant="outline" size="sm" className="flex-1 border-[#9E7E3D]/30 text-[#9E7E3D] hover:bg-[#9E7E3D] hover:text-white">
                         <Share className="w-3 h-3 mr-1" />
                         Share
                       </Button>
@@ -757,7 +639,7 @@ export function DietPlanGenerator() {
           </div>
 
           {/* Nutrition Summary */}
-          <Card className="card-rustic animate-on-scroll">
+          <Card className="bg-white rounded-xl shadow-lg">
             <CardHeader>
               <CardTitle className="text-[#9E7E3D] flex items-center">
                 <ChefHat className="w-5 h-5 mr-2 text-[#F5C24D]" />
@@ -766,19 +648,19 @@ export function DietPlanGenerator() {
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="text-center p-4 bg-gradient-to-br from-[#E1D1A5]/50 to-[#F5C24D]/20 rounded-lg border border-[#9E7E3D]/10 hover:shadow-md transition-all duration-300">
+                <div className="text-center p-4 bg-gradient-to-br from-[#E1D1A5]/50 to-[#F5C24D]/20 rounded-lg border border-[#9E7E3D]/10">
                   <p className="text-2xl text-[#9E7E3D] font-semibold">{totalCalories}</p>
                   <p className="text-sm text-[#4C7A5A]/70">Total Calories</p>
                 </div>
-                <div className="text-center p-4 bg-gradient-to-br from-[#4C7A5A]/20 to-[#E1D1A5]/30 rounded-lg border border-[#9E7E3D]/10 hover:shadow-md transition-all duration-300">
+                <div className="text-center p-4 bg-gradient-to-br from-[#4C7A5A]/20 to-[#E1D1A5]/30 rounded-lg border border-[#9E7E3D]/10">
                   <p className="text-2xl text-[#9E7E3D] font-semibold">65g</p>
                   <p className="text-sm text-[#4C7A5A]/70">Protein</p>
                 </div>
-                <div className="text-center p-4 bg-gradient-to-br from-[#F5C24D]/20 to-[#4C7A5A]/20 rounded-lg border border-[#9E7E3D]/10 hover:shadow-md transition-all duration-300">
+                <div className="text-center p-4 bg-gradient-to-br from-[#F5C24D]/20 to-[#4C7A5A]/20 rounded-lg border border-[#9E7E3D]/10">
                   <p className="text-2xl text-[#9E7E3D] font-semibold">180g</p>
                   <p className="text-sm text-[#4C7A5A]/70">Carbohydrates</p>
                 </div>
-                <div className="text-center p-4 bg-gradient-to-br from-[#E1D1A5]/50 to-[#4C7A5A]/20 rounded-lg border border-[#9E7E3D]/10 hover:shadow-md transition-all duration-300">
+                <div className="text-center p-4 bg-gradient-to-br from-[#E1D1A5]/50 to-[#4C7A5A]/20 rounded-lg border border-[#9E7E3D]/10">
                   <p className="text-2xl text-[#9E7E3D] font-semibold">45g</p>
                   <p className="text-sm text-[#4C7A5A]/70">Healthy Fats</p>
                 </div>
@@ -790,8 +672,8 @@ export function DietPlanGenerator() {
                   <div>
                     <p className="text-sm text-[#9E7E3D] font-medium">Ayurvedic Recommendation</p>
                     <p className="text-xs text-[#4C7A5A]/80 mt-1">
-                      This meal plan is designed to balance Vata-Pitta constitution. It includes warm, nourishing foods 
-                      for breakfast and lunch, with lighter dinner options that support proper digestion.
+                      This meal plan is designed to balance {selectedDosha} constitution. It includes {selectedDietType.toLowerCase()} foods 
+                      that support proper digestion and overall wellness.
                     </p>
                   </div>
                 </div>

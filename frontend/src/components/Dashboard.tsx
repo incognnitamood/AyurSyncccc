@@ -29,7 +29,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import aboutUsImage from "../assets/dashboard-ui.jpg";
+// import aboutUsImage from "../assets/dashboard-ui.jpg"; // Commented out due to missing file
 
 const dashboardStats = [
   {
@@ -135,33 +135,75 @@ const notifications = [
 export function Dashboard() {
   return (
     <div className="space-y-6">
-      {/* About Us Section with Complete Image */}
-      <div className="relative overflow-hidden animate-slide-scale rounded-3xl border-2 border-[#61803F]/20 shadow-2xl perspective-card">
-        <div className="w-full">
-          <img
-            src={aboutUsImage}
-            alt="AyurSync About Us - Bridging ancient Ayurvedic wisdom with cutting-edge nutrition science"
-            className="w-full h-auto object-contain"
-            style={{ fontFamily: 'Georgia, serif' }}
-          />
+      {/* Enhanced About Us Section */}
+      <div className="relative overflow-hidden animate-slide-scale rounded-3xl border-2 border-[#9E7E3D]/30 shadow-2xl perspective-card">
+        <div className="w-full bg-gradient-to-br from-[#F5F1E4] via-[#E1D1A5] to-[#D5D8AB] p-8 md:p-12">
+          <div className="text-center space-y-6">
+            <div className="flex items-center justify-center mb-6">
+              <div className="p-4 rounded-full bg-[#F5C24D]/20 border-2 border-[#9E7E3D]/20">
+                <Leaf className="w-12 h-12 text-[#9E7E3D]" />
+              </div>
+            </div>
+            
+            <h1 className="text-4xl md:text-5xl font-bold text-[#9E7E3D] mb-4" style={{ fontFamily: 'Georgia, serif' }}>
+              About AyurSync
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-[#4C7A5A] mb-6 max-w-4xl mx-auto leading-relaxed" style={{ fontFamily: 'Georgia, serif' }}>
+              Bridging ancient Ayurvedic wisdom with cutting-edge nutrition science
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              <div className="text-center p-6 rounded-2xl bg-white/50 border border-[#9E7E3D]/20">
+                <Heart className="w-8 h-8 text-[#F5C24D] mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-[#9E7E3D] mb-2">Holistic Health</h3>
+                <p className="text-sm text-[#4C7A5A]">Personalized wellness plans based on your unique constitution</p>
+              </div>
+              
+              <div className="text-center p-6 rounded-2xl bg-white/50 border border-[#9E7E3D]/20">
+                <Leaf className="w-8 h-8 text-[#F5C24D] mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-[#9E7E3D] mb-2">Ancient Wisdom</h3>
+                <p className="text-sm text-[#4C7A5A]">5000-year-old Ayurvedic principles for modern lifestyle</p>
+              </div>
+              
+              <div className="text-center p-6 rounded-2xl bg-white/50 border border-[#9E7E3D]/20">
+                <Shield className="w-8 h-8 text-[#F5C24D] mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-[#9E7E3D] mb-2">Scientific Approach</h3>
+                <p className="text-sm text-[#4C7A5A]">Evidence-based nutrition recommendations and tracking</p>
+              </div>
+            </div>
+            
+            <div className="mt-8 p-6 rounded-2xl bg-[#F5C24D]/10 border border-[#F5C24D]/30">
+              <p className="text-lg text-[#9E7E3D] font-medium" style={{ fontFamily: 'Georgia, serif' }}>
+                "Experience the perfect harmony of traditional Ayurvedic wisdom and modern nutritional science. 
+                Our AI-powered platform creates personalized diet plans tailored to your unique dosha constitution, 
+                helping you achieve optimal health and balance."
+              </p>
+            </div>
+          </div>
         </div>
-        
-        {/* Subtle Overlay for Enhancement */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#FEFEFE]/5 via-transparent to-[#FEFEFE]/5 pointer-events-none"></div>
         
         {/* Floating Decorative Elements */}
-        <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-[#C9C24D]/10 to-[#CA912E]/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-br from-[#84A15D]/10 to-[#61803F]/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-[#F5C24D]/10 to-[#4C7A5A]/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-br from-[#9E7E3D]/10 to-[#F5C24D]/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '3s' }}></div>
       </div>
       {/* Dashboard Header */}
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 glass-morphism rounded-3xl p-8 border-2 border-[#61803F]/20 card-rustic animate-glow perspective-card card-3d-hover neo-morphism">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 glass-morphism rounded-3xl p-8 border-2 border-[#9E7E3D]/20 card-rustic animate-glow perspective-card card-3d-hover neo-morphism">
         <div className="animate-slide-in-left">
-          <h2 className="text-3xl text-[#61803F] mb-3 font-bold tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>
+          <h2 className="text-3xl text-[#9E7E3D] mb-3 font-bold tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>
             Dashboard
           </h2>
+          <p className="text-[#4C7A5A]/80">Comprehensive overview of your Ayurvedic practice</p>
         </div>
         <div className="flex gap-4 animate-slide-in-right">
-          {/* Removed the 'Generate Report' and 'New Patient' buttons as requested */}
+          <Button className="btn-rustic-outline">
+            <FileText className="w-4 h-4 mr-2" />
+            Generate Report
+          </Button>
+          <Button className="btn-rustic">
+            <Plus className="w-4 h-4 mr-2" />
+            New Patient
+          </Button>
         </div>
       </div>
       {/* Stats Cards */}
@@ -177,21 +219,21 @@ export function Dashboard() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-[#677D5E] mb-2 font-medium" style={{ fontFamily: 'Georgia, serif' }}>
+                    <p className="text-sm text-[#4C7A5A]/80 mb-2 font-medium" style={{ fontFamily: 'Georgia, serif' }}>
                       {stat.title}
                     </p>
-                    <p className="text-3xl text-[#61803F] mb-2 font-bold" style={{ fontFamily: 'Georgia, serif' }}>
+                    <p className="text-3xl text-[#9E7E3D] mb-2 font-bold" style={{ fontFamily: 'Georgia, serif' }}>
                       {stat.value}
                     </p>
                     <div className="flex items-center">
-                      <TrendingUp className="w-4 h-4 text-[#84A15D] mr-2" />
-                      <span className="text-sm text-[#84A15D] font-semibold" style={{ fontFamily: 'Georgia, serif' }}>
+                      <TrendingUp className="w-4 h-4 text-[#F5C24D] mr-2" />
+                      <span className="text-sm text-[#F5C24D] font-semibold" style={{ fontFamily: 'Georgia, serif' }}>
                         {stat.change}
                       </span>
                     </div>
                   </div>
-                  <div className="p-4 rounded-2xl bg-gradient-to-br from-[#C9C24D]/30 to-[#CA912E]/30 border border-[#61803F]/20 transform transition-all duration-700 hover:scale-125 hover:rotate-12 animate-pulse-bright neo-morphism animate-levitate">
-                    <Icon className="w-7 h-7 text-[#61803F] drop-shadow-lg" />
+                  <div className="p-4 rounded-2xl bg-gradient-to-br from-[#F5C24D]/30 to-[#E1D1A5]/30 border border-[#9E7E3D]/20 transform transition-all duration-700 hover:scale-125 hover:rotate-12 animate-pulse-bright neo-morphism animate-levitate">
+                    <Icon className="w-7 h-7 text-[#9E7E3D] drop-shadow-lg" />
                   </div>
                 </div>
               </CardContent>

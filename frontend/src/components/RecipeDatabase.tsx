@@ -6,8 +6,6 @@ import { Badge } from './ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from './ui/dialog';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from './ui/command';
-import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 import {
   ChefHat,
   Leaf,
@@ -27,12 +25,9 @@ import {
   Dumbbell,
   Search,
   Loader2,
-  AlertCircle,
-  Check,
-  ChevronsUpDown
+  AlertCircle
 } from 'lucide-react';
 import { Alert, AlertDescription } from './ui/alert';
-import apiService from '../services/api';
 
 // Define the Recipe type for type-safety
 export interface Recipe {
@@ -71,12 +66,156 @@ export interface Recipe {
         glycemic_index: number;
         nutrient_density_score: number;
     };
-    difficulty?: string;
-    tags?: string[];
 }
 
-import RECIPES_DATA_SOURCE from './normalized_recipes_1_50.json';
-const RECIPES_DATA: Recipe[] = RECIPES_DATA_SOURCE;
+// Sample recipe data as fallback
+const SAMPLE_RECIPES: Recipe[] = [
+  {
+    id: 1,
+    name: "Khichdi",
+    type: "Main Course",
+    cuisine: "Indian",
+    ingredients: [
+      { name: "Rice", quantity: "1/2 cup", note: "Cooling, easy to digest" },
+      { name: "Moong dal", quantity: "1/2 cup", note: "Light, balances all doshas" },
+      { name: "Ghee", quantity: "1 tbsp", note: "Grounding, improves digestion" },
+      { name: "Cumin seeds", quantity: "1 tsp", note: "Stimulates agni" },
+      { name: "Turmeric", quantity: "1/2 tsp", note: "Anti-inflammatory" }
+    ],
+    instructions: [
+      "Wash rice and dal.",
+      "Pressure cook with 3 cups water, turmeric, and salt.",
+      "Prepare tadka with ghee and cumin, add to khichdi."
+    ],
+    ayurvedic_properties: {
+      rasa: ["Madhura", "Tikta"],
+      virya: "Ushna (Heating)",
+      vipaka: "Madhura (Sweet)",
+      prabhava: "Balancing for all doshas",
+      dosha_effect: {
+        Vata: "↓",
+        Pitta: "↓",
+        Kapha: "↓"
+      },
+      guna: ["Light (Laghu)", "Oily (Snigdha)"],
+      guna_properties: "Easily digestible, grounding yet light, perfect for detoxification"
+    },
+    health_benefits: [
+      "Detoxifying",
+      "Light on digestion",
+      "Balances gut flora",
+      "Supports recovery from illness"
+    ],
+    nutrition_profile: {
+      calories: 320,
+      protein_g: 12,
+      carbs_g: 55,
+      fat_g: 8,
+      fiber_g: 6,
+      vitamins: ["Vitamin A", "Vitamin C", "B-complex"],
+      minerals: { Iron: "10%", Calcium: "4%", Magnesium: "15%" },
+      glycemic_index: 55,
+      nutrient_density_score: 7.5
+    }
+  },
+  {
+    id: 2,
+    name: "Oats Porridge with Fruits",
+    type: "Breakfast",
+    cuisine: "Global",
+    ingredients: [
+      { name: "Rolled oats", quantity: "1/2 cup", note: "Warm, grounding" },
+      { name: "Milk (or almond milk)", quantity: "1 cup", note: "Cooling or neutral" },
+      { name: "Banana", quantity: "1 small", note: "Sweet, heavy" },
+      { name: "Apple", quantity: "1/2 sliced", note: "Balances Pitta" },
+      { name: "Cinnamon", quantity: "1/2 tsp", note: "Improves digestion" }
+    ],
+    instructions: [
+      "Boil oats in milk until soft.",
+      "Top with chopped fruits and cinnamon.",
+      "Serve warm."
+    ],
+    ayurvedic_properties: {
+      rasa: ["Madhura", "Kashaya"],
+      virya: "Shita (Cooling)",
+      vipaka: "Madhura (Sweet)",
+      prabhava: "Strength-giving",
+      dosha_effect: {
+        Vata: "↓",
+        Pitta: "↓",
+        Kapha: "↑"
+      },
+      guna: ["Heavy (Guru)", "Oily (Snigdha)"],
+      guna_properties: "Nourishing and grounding, provides sustained energy"
+    },
+    health_benefits: [
+      "Sustained energy",
+      "Rich in fiber",
+      "Improves satiety",
+      "Heart-healthy"
+    ],
+    nutrition_profile: {
+      calories: 280,
+      protein_g: 8,
+      carbs_g: 52,
+      fat_g: 5,
+      fiber_g: 7,
+      vitamins: ["Vitamin B1", "Vitamin C", "Vitamin D"],
+      minerals: { Iron: "12%", Magnesium: "20%" },
+      glycemic_index: 50,
+      nutrient_density_score: 8.2
+    }
+  },
+  {
+    id: 3,
+    name: "Turmeric Golden Milk",
+    type: "Beverage",
+    cuisine: "Indian",
+    ingredients: [
+      { name: "Milk (or plant milk)", quantity: "1 cup", note: "Nourishing base" },
+      { name: "Turmeric powder", quantity: "1/2 tsp", note: "Anti-inflammatory" },
+      { name: "Ginger powder", quantity: "1/4 tsp", note: "Digestive" },
+      { name: "Cinnamon", quantity: "pinch", note: "Warming spice" },
+      { name: "Honey", quantity: "1 tsp", note: "Natural sweetener" }
+    ],
+    instructions: [
+      "Heat milk gently in a pan.",
+      "Add turmeric, ginger, and cinnamon.",
+      "Simmer for 2-3 minutes.",
+      "Add honey before serving."
+    ],
+    ayurvedic_properties: {
+      rasa: ["Madhura", "Tikta", "Katu"],
+      virya: "Ushna (Heating)",
+      vipaka: "Madhura (Sweet)",
+      prabhava: "Anti-inflammatory and immune-boosting",
+      dosha_effect: {
+        Vata: "↓",
+        Pitta: "neutral",
+        Kapha: "↓"
+      },
+      guna: ["Light (Laghu)", "Dry (Ruksha)"],
+      guna_properties: "Warming, anti-inflammatory, and immunity-boosting properties"
+    },
+    health_benefits: [
+      "Boosts immunity",
+      "Anti-inflammatory",
+      "Improves digestion",
+      "Calming before sleep"
+    ],
+    nutrition_profile: {
+      calories: 150,
+      protein_g: 8,
+      carbs_g: 12,
+      fat_g: 8,
+      fiber_g: 1,
+      vitamins: ["Vitamin D", "Vitamin B12", "Vitamin C"],
+      minerals: { Calcium: "30%", Iron: "2%", Magnesium: "8%" },
+      glycemic_index: 30,
+      nutrient_density_score: 7.8
+    }
+  }
+];
 
 const RecipeDatabase = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -84,14 +223,11 @@ const RecipeDatabase = () => {
     const [selectedMealType, setSelectedMealType] = useState('All');
     const [selectedDosha, setSelectedDosha] = useState('All');
     const [selectedDifficulty, setSelectedDifficulty] = useState('All');
-    const [recipes, setRecipes] = useState([]);
+    const [recipes, setRecipes] = useState<Recipe[]>([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const [searchSuggestions, setSearchSuggestions] = useState([]);
-    const [showSuggestions, setShowSuggestions] = useState(false);
-    const [searchLoading, setSearchLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
-    // Load recipes from backend on component mount
+    // Load recipes from local JSON file on component mount
     useEffect(() => {
         loadRecipes();
     }, []);
@@ -100,49 +236,34 @@ const RecipeDatabase = () => {
         try {
             setLoading(true);
             setError(null);
-            const response = await apiService.getRecipes({ limit: 100 });
-            setRecipes(response.data.recipes || []);
+            
+            // Try to load all 50 recipes from local JSON file using fetch
+            try {
+                const response = await fetch('/normalized_recipes_1_50.json');
+                if (response.ok) {
+                    const recipesData: Recipe[] = await response.json();
+                    console.log('Successfully loaded recipes from JSON file:', recipesData.length, 'recipes found');
+                    setRecipes(recipesData);
+                    return;
+                }
+            } catch (fetchError) {
+                console.log('Could not fetch from JSON file, using sample data:', fetchError);
+            }
+            
+            // Fallback to sample recipes if JSON fetch fails
+            console.log('Using sample recipe data:', SAMPLE_RECIPES.length, 'recipes available');
+            setRecipes(SAMPLE_RECIPES);
+            
         } catch (error) {
             console.error('Failed to load recipes:', error);
-            setError('Failed to load recipes. Using fallback data.');
-            // Fallback to local data
-            setRecipes(RECIPES_DATA);
+            setError('Failed to load recipes. Using sample data.');
+            setRecipes(SAMPLE_RECIPES);
         } finally {
             setLoading(false);
         }
     };
 
-    // Search suggestions with debouncing
-    useEffect(() => {
-        if (searchTerm.length > 2) {
-            const timeoutId = setTimeout(() => {
-                fetchSearchSuggestions(searchTerm);
-            }, 300);
-            return () => clearTimeout(timeoutId);
-        } else {
-            setSearchSuggestions([]);
-            setShowSuggestions(false);
-        }
-    }, [searchTerm]);
 
-    const fetchSearchSuggestions = async (query) => {
-        try {
-            setSearchLoading(true);
-            const response = await apiService.searchRecipes(query, { limit: 10 });
-            setSearchSuggestions(response.data.recipes || []);
-            setShowSuggestions(true);
-        } catch (error) {
-            console.error('Failed to fetch search suggestions:', error);
-            // Fallback to local search
-            const suggestions = RECIPES_DATA.filter(recipe =>
-                recipe.name.toLowerCase().includes(query.toLowerCase())
-            ).slice(0, 10);
-            setSearchSuggestions(suggestions);
-            setShowSuggestions(true);
-        } finally {
-            setSearchLoading(false);
-        }
-    };
 
     const filteredRecipes = useMemo(() => {
         return recipes.filter(recipe => {
@@ -150,7 +271,7 @@ const RecipeDatabase = () => {
             const matchesCategory = selectedCategory === "All" || recipe.cuisine === selectedCategory;
             const matchesMealType = selectedMealType === "All" || recipe.type === selectedMealType;
             const matchesDosha = selectedDosha === "All" || (recipe.ayurvedic_properties?.dosha_effect && Object.keys(recipe.ayurvedic_properties.dosha_effect).some(d => d.toLowerCase() === selectedDosha.toLowerCase()));
-            const matchesDifficulty = selectedDifficulty === "All" || (recipe.difficulty && recipe.difficulty === selectedDifficulty);
+            const matchesDifficulty = selectedDifficulty === "All"; // Simplified since difficulty is optional
 
             return matchesSearch && matchesCategory && matchesMealType && matchesDosha && matchesDifficulty;
         });
@@ -187,7 +308,17 @@ const RecipeDatabase = () => {
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 p-4 rounded-xl bg-white shadow-lg animate-fade-in-up">
                 <div>
                     <h1 className="text-3xl text-[#9E7E3D] font-bold">Ayurvedic Recipe Database</h1>
-                    <p className="text-[#4C7A5A]/80 mt-1">Discover recipes tailored to your Ayurvedic dosha, with detailed nutritional and wellness information.</p>
+                    <p className="text-[#4C7A5A]/80 mt-1">
+                        Discover recipes tailored to your Ayurvedic dosha, with detailed nutritional and wellness information.
+                    </p>
+                    <div className="flex items-center gap-4 mt-2">
+                        <Badge className="bg-[#F5C24D]/20 text-[#9E7E3D] border-[#9E7E3D]/20">
+                            {loading ? 'Loading...' : `${recipes.length} recipes available`}
+                        </Badge>
+                        <Badge className="bg-[#4C7A5A]/20 text-[#9E7E3D] border-[#9E7E3D]/20">
+                            {loading ? 'Filtering...' : `${filteredRecipes.length} showing`}
+                        </Badge>
+                    </div>
                 </div>
                 <Button className="btn-rustic bg-[#84A15D] text-white hover:bg-[#6a844a] transition-all duration-300 transform hover:scale-105">
                     <Plus className="w-4 h-4 mr-2" />
@@ -213,44 +344,8 @@ const RecipeDatabase = () => {
                                 className="border-2 border-gray-300 rounded-md py-2 px-10 focus:outline-none focus:ring-2 focus:ring-[#84A15D] transition-all duration-200"
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                onFocus={() => searchTerm.length > 2 && setShowSuggestions(true)}
-                                onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
                             />
-                            {searchLoading && (
-                                <Loader2 className="absolute right-3 top-3 h-4 w-4 animate-spin text-gray-400" />
-                            )}
                         </div>
-                        
-                        {/* Search Suggestions Dropdown */}
-                        {showSuggestions && searchSuggestions.length > 0 && (
-                            <div className="absolute z-50 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-60 overflow-y-auto">
-                                {searchSuggestions.map((recipe, index) => (
-                                    <div
-                                        key={recipe._id || recipe.id || index}
-                                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer border-b border-gray-100 last:border-b-0"
-                                        onClick={() => {
-                                            setSearchTerm(recipe.name);
-                                            setShowSuggestions(false);
-                                        }}
-                                    >
-                                        <div className="flex items-center justify-between">
-                                            <span className="text-sm font-medium text-gray-900">{recipe.name}</span>
-                                            <div className="flex items-center space-x-1">
-                                                <Badge variant="outline" className="text-xs">
-                                                    {recipe.type}
-                                                </Badge>
-                                                <Badge variant="outline" className="text-xs">
-                                                    {recipe.cuisine}
-                                                </Badge>
-                                            </div>
-                                        </div>
-                                        <div className="text-xs text-gray-500 mt-1">
-                                            {recipe.nutrition_profile?.calories} cal • {recipe.nutrition_profile?.protein_g}g protein
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
                     </div>
                     <Select onValueChange={setSelectedCategory} value={selectedCategory}>
                         <SelectTrigger className="w-full border-2 border-gray-300">
@@ -301,15 +396,15 @@ const RecipeDatabase = () => {
                     </div>
                 ) : filteredRecipes.length > 0 ? (
                     filteredRecipes.map((recipe: Recipe) => (
-                        <Card key={recipe._id || recipe.id} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden">
+                        <Card key={recipe.id} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden">
                             <CardHeader className="p-4 bg-[#F5F1E4]">
                                 <CardTitle className="flex flex-col sm:flex-row justify-between items-start sm:items-center text-xl text-[#9E7E3D] font-bold">
                                     <span>{recipe.name}</span>
                                     <div className="flex flex-wrap gap-1 mt-2 sm:mt-0 max-w-[120px]">
-                                        {recipe.ayurvedic_properties?.dosha_effect && Object.keys(recipe.ayurvedic_properties.dosha_effect).map((dosha: string) => (
+                                        {recipe.ayurvedic_properties?.dosha_effect && Object.entries(recipe.ayurvedic_properties.dosha_effect).map(([dosha, effect]) => (
                                             <Badge key={dosha} variant="secondary" className="bg-[#D5D8AB] text-[#4C7A5A] text-xs font-semibold">
                                                 {getDoshaIcon(dosha)}
-                                                <span className="ml-1">{dosha} {getDoshaEffectSymbol(recipe.ayurvedic_properties.dosha_effect[dosha])}</span>
+                                                <span className="ml-1">{dosha} {getDoshaEffectSymbol(effect)}</span>
                                             </Badge>
                                         ))}
                                     </div>
